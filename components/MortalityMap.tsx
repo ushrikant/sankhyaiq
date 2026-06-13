@@ -93,9 +93,11 @@ type CountryFeature = {
 export default function MortalityMap() {
   const [year, setYear] = useState(START_YEAR);
   const [playing, setPlaying] = useState(true);
+  const [finished, setFinished] = useState(false);
   const [geoFeatures, setGeoFeatures] = useState<CountryFeature[]>([]);
   const [newlyClear, setNewlyClear] = useState<Set<string>>(new Set());
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const endPauseRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const yearRef = useRef(START_YEAR);
 
   // Load and project world atlas once
@@ -121,13 +123,12 @@ export default function MortalityMap() {
     const atEnd = yearRef.current >= END_YEAR;
 
     if (atEnd) {
-      // Pause for END_PAUSE_MS then restart
       if (timerRef.current) clearInterval(timerRef.current);
       timerRef.current = null;
-      setTimeout(() => {
-        yearRef.current = START_YEAR;
-        setYear(START_YEAR);
-        timerRef.current = setInterval(tick, FRAME_MS);
+      // pause 4s at 2024 then stop
+      endPauseRef.current = setTimeout(() => {
+        setPlaying(false);
+        setFinished(true);
       }, END_PAUSE_MS);
       return;
     }
@@ -152,11 +153,15 @@ export default function MortalityMap() {
 
   useEffect(() => {
     if (!playing) {
-      if (timerRef.current) clearInterval(timerRef.current);
+      if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
+      if (endPauseRef.current) { clearTimeout(endPauseRef.current); endPauseRef.current = null; }
       return;
     }
     timerRef.current = setInterval(tick, FRAME_MS);
-    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+    return () => {
+      if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
+      if (endPauseRef.current) { clearTimeout(endPauseRef.current); endPauseRef.current = null; }
+    };
   }, [playing, tick]);
 
   // Map numeric world-atlas IDs to ISO3 via a known lookup
@@ -182,21 +187,23 @@ export default function MortalityMap() {
             <span className="font-semibold text-forest">{achieved}</span> countries with child mortality ≤ {SMILEY_THRESHOLD}%
           </p>
         </div>
-        <button
-          onClick={() => setPlaying((p) => !p)}
-          className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-sm font-plex font-medium text-navy hover:bg-surface transition-colors"
-        >
-          {playing ? (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6 4h4v16H6zm8 0h4v16h-4z" />
-            </svg>
-          ) : (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          )}
-          {playing ? "Pause" : "Play"}
-        </button>
+        {!finished && (
+          <button
+            onClick={() => setPlaying((p) => !p)}
+            className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 text-sm font-plex font-medium text-navy hover:bg-surface transition-colors"
+          >
+            {playing ? (
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6zm8 0h4v16h-4z" />
+              </svg>
+            ) : (
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            )}
+            {playing ? "Pause" : "Play"}
+          </button>
+        )}
       </div>
 
       {/* Map */}
@@ -280,6 +287,28 @@ export default function MortalityMap() {
           Source: Gapminder; UN IGME via Our World in Data
         </span>
       </div>
+
+      {/* Replay button */}
+      {finished && (
+        <div className="flex justify-center mt-3">
+          <button
+            onClick={() => {
+              if (endPauseRef.current) { clearTimeout(endPauseRef.current); endPauseRef.current = null; }
+              setFinished(false);
+              yearRef.current = START_YEAR;
+              setYear(START_YEAR);
+              setNewlyClear(new Set());
+              setPlaying(true);
+            }}
+            className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-500 text-amber-900 font-plex font-semibold text-sm px-5 py-2 rounded-full transition-colors"
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+            </svg>
+            Replay
+          </button>
+        </div>
+      )}
     </div>
   );
 }
