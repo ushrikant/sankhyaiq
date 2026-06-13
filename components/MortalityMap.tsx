@@ -8,9 +8,10 @@ import mortData from "@/lib/mortality-data.json";
 const GEO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 const START_YEAR = 1950;
-const END_YEAR = 2023;
+const END_YEAR = 2024;
 const SMILEY_THRESHOLD = 4;
-const FRAME_MS = 340; // ~280ms + 20% slower
+const FRAME_MS = 340;
+const END_PAUSE_MS = 4000;
 
 const W = 800;
 const H = 400;
@@ -117,7 +118,21 @@ export default function MortalityMap() {
   }, []);
 
   const tick = useCallback(() => {
-    yearRef.current = yearRef.current >= END_YEAR ? START_YEAR : yearRef.current + 1;
+    const atEnd = yearRef.current >= END_YEAR;
+
+    if (atEnd) {
+      // Pause for END_PAUSE_MS then restart
+      if (timerRef.current) clearInterval(timerRef.current);
+      timerRef.current = null;
+      setTimeout(() => {
+        yearRef.current = START_YEAR;
+        setYear(START_YEAR);
+        timerRef.current = setInterval(tick, FRAME_MS);
+      }, END_PAUSE_MS);
+      return;
+    }
+
+    yearRef.current = yearRef.current + 1;
     const y = yearRef.current;
     setYear(y);
 
