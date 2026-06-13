@@ -17,6 +17,15 @@ const MortalityMap = dynamic(() => import("@/components/MortalityMap"), {
   ),
 });
 
+const IndiaREChart = dynamic(() => import("@/components/IndiaREChart"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-48 rounded-2xl bg-surface border border-gray-100 flex items-center justify-center">
+      <p className="font-plex text-sm text-muted animate-pulse">Loading energy data…</p>
+    </div>
+  ),
+});
+
 export default function HomePage() {
   const chartOfDay = getChartOfDay();
   const featuredStories = getFeaturedStories().slice(0, 3);
@@ -65,7 +74,7 @@ export default function HomePage() {
             <MortalityMap />
           </div>
 
-          <p className="font-plex text-xs text-muted text-right">
+          <p className="font-plex text-xs text-muted text-right mb-10">
             This is the kind of story SankhyaIQ tells. Data from{" "}
             <a
               href="https://ourworldindata.org/child-mortality"
@@ -74,6 +83,38 @@ export default function HomePage() {
               className="underline underline-offset-2 hover:text-navy"
             >
               Our World in Data
+            </a>
+          </p>
+
+          {/* India Renewable Energy animated chart */}
+          <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-1 h-6 bg-amber-400 rounded-full" />
+              <h2 className="font-plex text-sm font-semibold text-navy uppercase tracking-widest">
+                Live chart — India&apos;s renewable energy capacity, 2000–2026
+              </h2>
+            </div>
+            <IndiaREChart />
+          </div>
+
+          <p className="font-plex text-xs text-muted text-right">
+            Data from{" "}
+            <a
+              href="https://www.irena.org/Data/Downloads/IRENASTAT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-navy"
+            >
+              IRENA Statistics
+            </a>
+            {" "}and{" "}
+            <a
+              href="https://mnre.gov.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-navy"
+            >
+              MNRE India
             </a>
           </p>
         </div>
