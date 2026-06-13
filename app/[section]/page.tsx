@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props) {
   const section = getSectionBySlug(params.section);
   if (!section) return {};
   return {
-    title: `${section.label} — SankhyaIQ`,
+    title: `${section.label} | SankhyaIQ`,
     description: section.descriptor,
   };
 }

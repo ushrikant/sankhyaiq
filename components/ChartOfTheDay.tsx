@@ -41,7 +41,7 @@ export default function ChartOfTheDay({ story }: ChartOfTheDayProps) {
               className="w-16 h-16 rounded-full mx-auto mb-4 opacity-30"
               style={{ background: section?.accentColor || "#1565c0" }}
             />
-            <p className="font-plex text-sm text-muted">Chart placeholder — add your Datawrapper embed here</p>
+            <p className="font-plex text-sm text-muted">Chart placeholder: add your Datawrapper embed here</p>
           </div>
           {/* Chart of the Day label */}
           <div className="absolute top-4 left-4 bg-cobalt text-white text-xs font-plex font-semibold px-3 py-1 rounded-full">

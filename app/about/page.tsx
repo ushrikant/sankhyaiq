@@ -4,7 +4,7 @@ import NewsletterStrip from "@/components/NewsletterStrip";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — SankhyaIQ",
+  title: "About | SankhyaIQ",
   description: "Who is behind SankhyaIQ, why it exists and how we work with data.",
 };
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
         {/* Story */}
         <div className="prose max-w-none">
           <p className="font-plex text-lg text-navy/80 leading-relaxed mb-6">
-            I have been fascinated by numbers since school. Not the kind you memorise for exams — the kind that describe the world around you. How many tigers are left in Madhya Pradesh. What percentage of India uses the internet. How much the rupee has moved against the dollar since liberalisation.
+            I have been fascinated by numbers since school. Not the kind you memorise for exams, the kind that describe the world around you. How many tigers are left in Madhya Pradesh. What percentage of India uses the internet. How much the rupee has moved against the dollar since liberalisation.
           </p>
           <p className="font-plex text-base text-muted leading-relaxed mb-6">
             The trouble is that most of this data sits in PDFs, government portals and academic papers that no one reads. It deserves better. A good chart can communicate in seconds what a paragraph struggles to say in 200 words. That is the idea behind SankhyaIQ.
@@ -64,7 +64,7 @@ export default function AboutPage() {
               "MoEFCC and Wildlife Institute of India (environment and wildlife)",
               "Ministry of Road Transport and Highways (vehicle data, VAHAN portal)",
               "NITI Aayog datasets and SDG India Index",
-              "Open Government Data (OGD) Platform — data.gov.in",
+              "Open Government Data (OGD) Platform (data.gov.in)",
               "ISRO and DST for science and space stories",
             ].map((source) => (
               <li key={source} className="flex gap-3 items-start">

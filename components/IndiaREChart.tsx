@@ -388,7 +388,7 @@ export default function IndiaREChart() {
               fontSize={13} fontWeight="700" fill="#1d4ed8"
               fontFamily="'Playfair Display', serif"
             >
-              {RE_DATA[idx].year} — {totalGW(RE_DATA[idx]).toFixed(1)} GW
+              {RE_DATA[idx].year}: {totalGW(RE_DATA[idx]).toFixed(1)} GW
             </text>
           )}
         </svg>

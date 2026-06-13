@@ -16,7 +16,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "SankhyaIQ — Data Stories from India and the World",
+  title: "SankhyaIQ | Data Stories from India and the World",
   description:
     "Numbers made visual. Facts made beautiful. SankhyaIQ is India's home for data storytelling across science, society, maps, nature, economy and more.",
   metadataBase: new URL("https://sankhyaiq.in"),

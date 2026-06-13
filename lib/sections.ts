@@ -43,7 +43,7 @@ export const sections: Section[] = [
   {
     slug: "animals-and-nature",
     label: "Animals & Nature",
-    descriptor: "Data from the wild — population counts, migrations and the natural world",
+    descriptor: "Data from the wild: population counts, migrations and the natural world",
     color: "#2e7d32",
     bgClass: "bg-forest",
     textClass: "text-forest",
