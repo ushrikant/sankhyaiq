@@ -368,15 +368,15 @@ export default function IndiaREChart() {
           {/* ── Complete callout ── */}
           {phase === "complete" && (
             <g>
-              <rect x={PAD_L + CW - 160} y={PAD_T} width={156} height={48} rx={8}
+              <rect x={PAD_L + 6} y={PAD_T + 4} width={160} height={48} rx={8}
                 fill="#fef9c3" stroke="#fde68a" strokeWidth={1} />
-              <text x={PAD_L + CW - 82} y={PAD_T + 18}
+              <text x={PAD_L + 86} y={PAD_T + 22}
                 textAnchor="middle" fontSize={11} fontWeight="700" fill="#92400e"
                 fontFamily="'IBM Plex Sans', sans-serif"
               >
                 India: 300+ GW Renewable
               </text>
-              <text x={PAD_L + CW - 82} y={PAD_T + 34}
+              <text x={PAD_L + 86} y={PAD_T + 38}
                 textAnchor="middle" fontSize={10} fill="#b45309"
                 fontFamily="'IBM Plex Sans', sans-serif"
               >
