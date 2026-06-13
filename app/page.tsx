@@ -1,4 +1,5 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StoryCard from "@/components/StoryCard";
@@ -6,6 +7,15 @@ import ChartOfTheDay from "@/components/ChartOfTheDay";
 import NewsletterStrip from "@/components/NewsletterStrip";
 import SectionStrip from "@/components/SectionStrip";
 import { getChartOfDay, getFeaturedStories, getLatestStories } from "@/lib/stories";
+
+const MortalityMap = dynamic(() => import("@/components/MortalityMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-64 lg:h-80 rounded-2xl bg-surface border border-gray-100 flex items-center justify-center">
+      <p className="font-plex text-sm text-muted animate-pulse">Loading world data…</p>
+    </div>
+  ),
+});
 
 export default function HomePage() {
   const chartOfDay = getChartOfDay();
@@ -16,56 +26,56 @@ export default function HomePage() {
     <>
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative bg-navy overflow-hidden">
-        {/* Background texture: data scatter dots */}
-        <svg
-          className="absolute inset-0 w-full h-full opacity-5"
-          viewBox="0 0 1200 500"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          {Array.from({ length: 60 }).map((_, i) => (
-            <circle
-              key={i}
-              cx={Math.sin(i * 1.3) * 600 + 600}
-              cy={Math.cos(i * 0.9) * 250 + 250}
-              r={i % 7 === 0 ? 4 : i % 3 === 0 ? 2 : 1}
-              fill="white"
-            />
-          ))}
-          {Array.from({ length: 8 }).map((_, i) => (
-            <line
-              key={`l${i}`}
-              x1={150 * i}
-              y1="0"
-              x2={150 * i + 200}
-              y2="500"
-              stroke="white"
-              strokeWidth="0.4"
-            />
-          ))}
-        </svg>
+      {/* Hero — white background, animated infographic */}
+      <section className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <p className="font-plex text-sm font-semibold uppercase tracking-widest text-sky mb-4">
-            Data Storytelling from India
+          {/* Text header */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+            <div className="max-w-xl">
+              <p className="font-plex text-xs font-semibold uppercase tracking-widest text-cobalt mb-3">
+                Data Storytelling from India
+              </p>
+              <h1 className="font-playfair text-4xl sm:text-5xl font-bold text-navy leading-tight mb-4">
+                India&apos;s home for data stories. Numbers made visual. Facts made beautiful.
+              </h1>
+              <p className="font-plex text-base text-muted leading-relaxed">
+                SankhyaIQ turns datasets into stories worth sharing — charts, maps and visual essays built from public data that anyone can understand.
+              </p>
+            </div>
+            <Link
+              href="#stories"
+              className="self-start lg:self-auto inline-flex items-center gap-2 bg-cobalt text-white font-plex font-semibold px-6 py-3 rounded-full hover:bg-navy transition-colors text-sm shrink-0"
+            >
+              Explore stories
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </Link>
+          </div>
+
+          {/* Animated world map infographic */}
+          <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-1 h-6 bg-cobalt rounded-full" />
+              <h2 className="font-plex text-sm font-semibold text-navy uppercase tracking-widest">
+                Live chart — Child mortality across the world, 1950–2023
+              </h2>
+            </div>
+            <MortalityMap />
+          </div>
+
+          <p className="font-plex text-xs text-muted text-right">
+            This is the kind of story SankhyaIQ tells. Data from{" "}
+            <a
+              href="https://ourworldindata.org/child-mortality"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-navy"
+            >
+              Our World in Data
+            </a>
           </p>
-          <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl mb-6">
-            India&apos;s home for data stories. Numbers made visual. Facts made beautiful.
-          </h1>
-          <p className="font-plex text-lg text-white/75 max-w-xl mb-10 leading-relaxed">
-            SankhyaIQ turns datasets into stories worth sharing. We take public data from government portals, research institutions and open sources, then turn them into charts, maps and visual essays that anyone can understand.
-          </p>
-          <Link
-            href="#stories"
-            className="inline-flex items-center gap-2 bg-sky text-navy font-plex font-semibold px-7 py-3.5 rounded-full hover:bg-white transition-colors text-sm"
-          >
-            Explore stories
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </Link>
         </div>
       </section>
 
