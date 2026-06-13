@@ -168,12 +168,9 @@ export default function IndiaREChart() {
     const frame = (now: number) => {
       const t = Math.min(1, (now - startTime) / BOUNCE_MS);
       const ease = easeInOut(t);
-      const mx = (x0 + x1) / 2;
-      const minY = Math.min(y0, y1);
       const arcH = Math.abs(x1 - x0) * 0.35 + 20;
       const sx = x0 + (x1 - x0) * ease;
       const sy = y0 + (y1 - y0) * ease - arcH * Math.sin(Math.PI * t);
-      void mx;
       setSunPos({ x: sx, y: sy });
       if (t < 1) {
         rafRef.current = requestAnimationFrame(frame);
