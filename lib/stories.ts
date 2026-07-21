@@ -52,16 +52,6 @@ export const stories: Story[] = [
     image: "/images/animals-and-nature/animal-sleep.jpg",
   },
   {
-    slug: "ten-uncommon-animal-comparisons",
-    section: "animals-and-nature",
-    title: "Ten uncommon comparisons from the animal kingdom",
-    excerpt: "Ten measurements that overturn what size, speed and time seem to promise, each plotted against the animal's own scale.",
-    readTime: 9,
-    publishedAt: "2026-07-21",
-    image: "/images/animals-and-nature/animal-sleep.jpg",
-    featured: true,
-  },
-  {
     slug: "ai-compute-vs-moores-law",
     section: "ai-and-technology",
     title: "AI compute growth vs Moore's Law",

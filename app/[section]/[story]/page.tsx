@@ -5,13 +5,8 @@ import Footer from "@/components/Footer";
 import StoryCard from "@/components/StoryCard";
 import DataSources from "@/components/DataSources";
 import ShareButtons from "@/components/ShareButtons";
-import AnimalComparisons from "@/components/AnimalComparisons";
 import { getSectionBySlug } from "@/lib/sections";
 import { getStoryBySlug, getStoriesBySection, stories } from "@/lib/stories";
-
-const CUSTOM_BODIES: Record<string, React.ComponentType> = {
-  "ten-uncommon-animal-comparisons": AnimalComparisons,
-};
 
 interface Props {
   params: { section: string; story: string };
@@ -72,51 +67,6 @@ export default function StoryPage({ params }: Props) {
   });
 
   const storyUrl = `https://sankhyaiq.in/${params.section}/${params.story}`;
-  const CustomBody = CUSTOM_BODIES[params.story];
-
-  if (CustomBody) {
-    return (
-      <>
-        <Navbar />
-        <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-          <div className="flex flex-wrap items-center gap-3 mb-6">
-            <Link
-              href={`/${section.slug}`}
-              className="text-xs font-plex font-semibold px-3 py-1 rounded-full"
-              style={{
-                background: `${section.accentColor}18`,
-                color: section.accentColor,
-              }}
-            >
-              {section.label}
-            </Link>
-            <span className="font-plex text-xs text-muted">{story.readTime} min read</span>
-            <span className="font-plex text-xs text-muted">{publishedDate}</span>
-          </div>
-
-          <CustomBody />
-
-          <ShareButtons title={story.title} url={storyUrl} />
-          <DataSources sources={placeholderSources} />
-        </main>
-
-        {moreStories.length > 0 && (
-          <section className="bg-surface border-t border-gray-100 py-14">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="font-playfair text-2xl font-bold text-navy mb-6">More stories</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {moreStories.map((s) => (
-                  <StoryCard key={s.slug} story={s} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        <Footer />
-      </>
-    );
-  }
 
   return (
     <>

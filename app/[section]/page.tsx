@@ -5,8 +5,13 @@ import Footer from "@/components/Footer";
 import SectionHero from "@/components/SectionHero";
 import StoryCard from "@/components/StoryCard";
 import NewsletterStrip from "@/components/NewsletterStrip";
+import AnimalComparisons from "@/components/AnimalComparisons";
 import { getSectionBySlug, sections } from "@/lib/sections";
 import { getStoriesBySection } from "@/lib/stories";
+
+const SECTION_FEATURES: Record<string, React.ComponentType> = {
+  "animals-and-nature": AnimalComparisons,
+};
 
 interface Props {
   params: { section: string };
@@ -35,12 +40,20 @@ export default function SectionPage({ params }: Props) {
     .filter((s) => s.slug !== section.slug)
     .slice(0, 2);
 
+  const SectionFeature = SECTION_FEATURES[section.slug];
+
   return (
     <>
       <Navbar />
       <SectionHero section={section} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        {SectionFeature && (
+          <div className="max-w-4xl mx-auto mb-16">
+            <SectionFeature />
+          </div>
+        )}
+
         {/* Stories grid */}
         {stories.length > 0 ? (
           <section className="mb-16">
