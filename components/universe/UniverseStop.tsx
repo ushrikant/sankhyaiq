@@ -33,14 +33,17 @@ export default function UniverseStop({ stop, isLast, onReplay }: UniverseStopPro
       id={`universe-stop-${stop.id}`}
       ref={ref}
       className="relative h-full w-full flex-shrink-0 snap-start snap-always overflow-hidden"
-      role="img"
-      aria-label={stop.visual}
     >
-      <StopBackground id={stop.id} isInView={isInView} reducedMotion={reducedMotion} />
+      <StopBackground stop={stop} isInView={isInView} reducedMotion={reducedMotion} />
 
-      <div className="relative h-full w-full flex flex-col items-center justify-end pb-16 px-6">
-        <p className="font-playfair text-2xl sm:text-4xl font-bold text-white text-center drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)] max-w-md">
+      <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+
+      <div className="relative h-full w-full flex flex-col items-center justify-end pb-16 px-6 text-center">
+        <p className="font-playfair text-2xl sm:text-4xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] max-w-md">
           {stop.caption}
+        </p>
+        <p className="font-plex text-sm sm:text-base font-light text-white/90 mt-2 max-w-sm drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)]">
+          {stop.narration}
         </p>
 
         {stop.audioSrc && (

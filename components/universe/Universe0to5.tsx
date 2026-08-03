@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { universeStops0to5 } from "@/lib/universe";
 import UniverseStop from "./UniverseStop";
-import GuideCharacter from "./GuideCharacter";
 
 export default function Universe0to5() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -15,7 +14,6 @@ export default function Universe0to5() {
 
   return (
     <div className="relative h-full w-full">
-      <GuideCharacter />
       <div
         ref={containerRef}
         className="h-full w-full overflow-y-scroll snap-y snap-mandatory overscroll-y-contain"
