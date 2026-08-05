@@ -32,24 +32,26 @@ export default function UniverseStop({ stop, isLast, onReplay }: UniverseStopPro
     <section
       id={`universe-stop-${stop.id}`}
       ref={ref}
-      className="relative h-full w-full flex-shrink-0 snap-start snap-always overflow-hidden"
+      className="relative h-full w-full flex-shrink-0 snap-start snap-always overflow-hidden flex flex-col md:flex-row"
     >
-      <StopBackground
-        image={stop.image}
-        alt={stop.visual}
-        isInView={isInView}
-        reducedMotion={reducedMotion}
-        entranceClass={entranceAnimation(stop.id)}
-        priority={stop.id === 0}
-      />
+      {/* Image gets its own region instead of a full-bleed backdrop with text
+          overlaid on top, so the art is never covered up. */}
+      <div className="relative w-full h-[58%] md:h-full md:w-1/2 lg:w-3/5 shrink-0 overflow-hidden">
+        <StopBackground
+          image={stop.image}
+          alt={stop.visual}
+          isInView={isInView}
+          reducedMotion={reducedMotion}
+          entranceClass={entranceAnimation(stop.id)}
+          priority={stop.id === 0}
+        />
+      </div>
 
-      <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
-
-      <div className="relative h-full w-full flex flex-col items-center justify-end pb-16 px-6 text-center">
-        <p className="font-playfair text-2xl sm:text-4xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] max-w-md">
+      <div className="relative flex-1 min-h-0 flex flex-col justify-center items-center md:items-start px-6 py-6 md:px-10 lg:px-14 text-center md:text-left bg-navy overflow-y-auto">
+        <p className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-md">
           {stop.caption}
         </p>
-        <p className="font-plex text-sm sm:text-base font-light text-white/90 mt-2 max-w-sm drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)]">
+        <p className="font-plex text-sm sm:text-base font-light text-white/80 mt-3 max-w-sm">
           {stop.narration}
         </p>
 
@@ -73,7 +75,7 @@ export default function UniverseStop({ stop, isLast, onReplay }: UniverseStopPro
         {isLast && (
           <button
             onClick={onReplay}
-            className="mt-6 px-5 py-2 rounded-full bg-cobalt text-white font-plex text-sm font-medium hover:bg-navy transition-colors"
+            className="mt-6 px-5 py-2 rounded-full bg-cobalt text-white font-plex text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Start again
           </button>
