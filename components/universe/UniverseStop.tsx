@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import type { UniverseStop as UniverseStopData } from "@/lib/universe";
 import { useInView, usePrefersReducedMotion } from "@/lib/useInView";
-import StopBackground from "./StopBackground";
+import StopBackground, { entranceAnimation } from "./StopBackground";
 
 interface UniverseStopProps {
   stop: UniverseStopData;
@@ -34,7 +34,14 @@ export default function UniverseStop({ stop, isLast, onReplay }: UniverseStopPro
       ref={ref}
       className="relative h-full w-full flex-shrink-0 snap-start snap-always overflow-hidden"
     >
-      <StopBackground stop={stop} isInView={isInView} reducedMotion={reducedMotion} />
+      <StopBackground
+        image={stop.image}
+        alt={stop.visual}
+        isInView={isInView}
+        reducedMotion={reducedMotion}
+        entranceClass={entranceAnimation(stop.id)}
+        priority={stop.id === 0}
+      />
 
       <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
 

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ageBands } from "@/lib/universe";
 import Universe0to5 from "./Universe0to5";
+import Universe6to8 from "./Universe6to8";
 import ComingSoonPlaceholder from "./ComingSoonPlaceholder";
 
 export default function AgeBandTabs() {
@@ -29,8 +30,10 @@ export default function AgeBandTabs() {
       </div>
 
       <div className="flex-1 min-h-0">
-        {activeBand.ready ? (
+        {activeBand.slug === "0-5" ? (
           <Universe0to5 />
+        ) : activeBand.slug === "6-8" ? (
+          <Universe6to8 />
         ) : (
           <ComingSoonPlaceholder band={activeBand} />
         )}

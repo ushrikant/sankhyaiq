@@ -64,6 +64,10 @@ const config: Config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "universe-shrink": {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(0.6)" },
+        },
       },
       animation: {
         "universe-burst": "universe-burst 1.2s ease-out forwards",
@@ -75,6 +79,7 @@ const config: Config = {
         "universe-rise": "universe-rise 1.4s ease-out forwards",
         "universe-float": "universe-float 3s ease-in-out infinite",
         "universe-fade": "universe-fade 1s ease-out forwards",
+        "universe-shrink": "universe-shrink 1.8s ease-out forwards",
       },
       typography: {
         DEFAULT: {

@@ -1,13 +1,16 @@
 import Image from "next/image";
-import type { UniverseStop as UniverseStopData } from "@/lib/universe";
 
 interface StopBackgroundProps {
-  stop: UniverseStopData;
+  image: string;
+  alt: string;
   isInView: boolean;
   reducedMotion: boolean;
+  /** Entrance animation class applied once the stop scrolls into view. Defaults to a plain fade. */
+  entranceClass?: string;
+  priority?: boolean;
 }
 
-function entranceAnimation(id: number) {
+export function entranceAnimation(id: number) {
   switch (id) {
     case 1:
       return "animate-universe-burst";
@@ -25,13 +28,20 @@ function entranceAnimation(id: number) {
 // away and lose the guide character at the edge of the frame, so the full
 // image is shown "contained" over a blurred, scaled up copy of itself as a
 // full bleed backdrop.
-export default function StopBackground({ stop, isInView, reducedMotion }: StopBackgroundProps) {
+export default function StopBackground({
+  image,
+  alt,
+  isInView,
+  reducedMotion,
+  entranceClass = "animate-universe-fade",
+  priority,
+}: StopBackgroundProps) {
   const motionClass = isInView
     ? reducedMotion
       ? "animate-universe-fade"
-      : entranceAnimation(stop.id)
+      : entranceClass
     : "opacity-0";
-  const src = `/images/universe/${stop.image}`;
+  const src = `/images/universe/${image}`;
 
   return (
     <div className="absolute inset-0">
@@ -41,15 +51,15 @@ export default function StopBackground({ stop, isInView, reducedMotion }: StopBa
         aria-hidden="true"
         fill
         sizes="200px"
-        priority={stop.id === 0}
+        priority={priority}
         className={`object-cover scale-110 blur-2xl opacity-70 ${motionClass}`}
       />
       <Image
         src={src}
-        alt={stop.visual}
+        alt={alt}
         fill
         sizes="100vw"
-        priority={stop.id === 0}
+        priority={priority}
         className={`object-contain ${motionClass}`}
       />
     </div>
