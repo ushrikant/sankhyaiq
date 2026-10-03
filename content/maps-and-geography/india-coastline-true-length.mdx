@@ -1,0 +1,58 @@
+For about fifty years, every textbook said India's coastline was 7,516.6 km long. In 2024 the official figure changed to 11,098.81 km. That is 3,582 km more, an increase of 47.7%.
+
+India did not gain any land. The coast was simply measured more carefully.
+
+<StatGrid
+  stats={[
+    { value: "7,516.6 km", label: "Old official length, used since the 1970s" },
+    { value: "11,098.8 km", label: "Re-verified length, adopted in 2024 and 2025" },
+    { value: "+47.7%", label: "Increase from better measurement alone" },
+  ]}
+/>
+
+## The coastline paradox
+
+The length of a coastline depends on the size of the ruler. Measure with a 100 km ruler and you skip every bay and inlet. Measure with a 1 km ruler and you follow them, so the total grows. The smaller the ruler, the longer the coast.
+
+Mathematicians call this the coastline paradox. The British scientist Lewis Fry Richardson documented it in the mid twentieth century. Benoit Mandelbrot built on his work in 1967 to explain fractals.
+
+The old Indian figure came from maps at a scale of about 1 to 45 lakh. The new one uses electronic navigation charts at 1 to 2.5 lakh, measured along the high water line with modern GIS tools. Bays, creeks, estuaries and small islands that were smoothed away before are now counted.
+
+## Coastline by state and union territory
+
+<Figure
+  title="Length of coastline by state and UT"
+  subtitle="Re-verified length in km"
+  source="Survey of India and National Hydrographic Office, Length of Coastline of India"
+>
+  <BarChart
+    unit=" km"
+    digits={0}
+    labelWidth={170}
+    data={[
+      { label: "Andaman & Nicobar", value: 3083.50 },
+      { label: "Gujarat", value: 2340.62, highlight: true },
+      { label: "Tamil Nadu", value: 1068.69 },
+      { label: "Andhra Pradesh", value: 1053.07 },
+      { label: "Maharashtra", value: 877.97 },
+      { label: "West Bengal", value: 721.02 },
+      { label: "Kerala", value: 600.15 },
+      { label: "Odisha", value: 574.71 },
+      { label: "Karnataka", value: 343.30 },
+      { label: "Goa", value: 193.95 },
+      { label: "Lakshadweep", value: 144.80 },
+      { label: "Daman & Diu", value: 54.38 },
+      { label: "Puducherry", value: 42.65 },
+    ]}
+  />
+</Figure>
+
+The Andaman and Nicobar Islands have the longest coastline of any state or UT, at 3,083.5 km. Hundreds of islands each add their own shore.
+
+Gujarat has the longest coastline among the states, at 2,340.6 km. The Gulf of Kachchh and the Gulf of Khambhat are full of creeks and mudflats, which the finer measurement picks up.
+
+## Why the number matters
+
+Coastline length is used to plan coastal security, fisheries, ports and disaster response. It also affects how India marks its maritime zones. A government circular of 29 April 2025 says the length will now be reviewed every ten years with newer data.
+
+One note on sources. An earlier estimate accepted in 2019 put the length at 11,084.5 km. The re-verified figure published by the Survey of India is 11,098.81 km. That is the figure used here.

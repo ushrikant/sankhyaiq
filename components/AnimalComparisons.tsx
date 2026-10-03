@@ -267,7 +267,7 @@ export default function AnimalComparisons() {
   return (
     <div className="font-plex">
       <header className="mb-10">
-        <p className="font-plex text-xs tracking-[0.24em] uppercase text-forest mb-3">SankhyaIQ · Field Notes No. 07</p>
+        <p className="font-plex text-xs tracking-[0.24em] uppercase text-forest mb-3">SankhyaIQ · Field Notes No. 01</p>
         <h1 className="font-playfair text-3xl lg:text-5xl font-bold text-navy leading-tight max-w-2xl mb-4">
           Ten uncommon comparisons from the <em className="italic text-forest">animal kingdom</em>
         </h1>

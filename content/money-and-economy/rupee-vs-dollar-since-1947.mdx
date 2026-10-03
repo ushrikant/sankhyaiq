@@ -1,0 +1,46 @@
+import fx from "@/data/rupee-dollar.json";
+
+At independence a US dollar cost Rs 3.31. In 2025 it cost Rs 87.15 on average. That is a fall of about 96% in the rupee's dollar value over 78 years.
+
+A popular myth says one rupee equalled one dollar in 1947. It did not. The rupee was then tied to the British pound. The official rate worked out to Rs 3.31 per dollar.
+
+<Figure
+  title="Rupees per US dollar, 1947 to 2025"
+  subtitle="Official fixed rates to 1971, then annual average rates from 1973"
+  source="Official parities from historical records; 1973 to 2025 annual averages from the US Federal Reserve H.10 series"
+  note="Until the early 1970s the rupee was pegged to sterling, so the line moves in steps. From 1975 it was linked to a basket of currencies. From 1993 the market set the rate."
+>
+  <LineChart
+    digits={2}
+    yPrefix="Rs "
+    markers={[{ x: 1966, label: "1966" }, { x: 1991, label: "1991" }, { x: 2008, label: "2008" }]}
+    series={[
+      { name: "Fixed rate", points: [[1947, 3.31], [1949, 3.31], [1949, 4.76], [1966, 4.76], [1966, 7.5], [1971, 7.5]], color: "#8e5a9e", hideEndLabel: true },
+      { name: "Market rate", points: fx, color: "#1565c0" },
+    ]}
+  />
+</Figure>
+
+## Three big moves
+
+1. **1949 and 1966: devaluations.** In 1949 Britain devalued the pound and India followed, taking the rate to Rs 4.76. In June 1966, after war, drought and a foreign exchange crisis, India devalued again to Rs 7.50.
+2. **1991: the crisis.** India ran short of foreign exchange to pay for imports. The rupee was devalued in July 1991 and later allowed to float. The annual average went from Rs 17.49 in 1990 to Rs 31.29 in 1993.
+3. **2008 onwards: the long slide.** The rupee averaged Rs 41.18 in 2007. It crossed Rs 50 in 2012, Rs 60 in 2014, Rs 70 in 2019 and Rs 80 in 2023. It averaged Rs 87.15 in 2025.
+
+<StatGrid
+  stats={[
+    { value: "Rs 3.31", label: "Per dollar in 1947" },
+    { value: "Rs 17.49", label: "Annual average, 1990" },
+    { value: "Rs 87.15", label: "Annual average, 2025" },
+  ]}
+/>
+
+## Is a weaker rupee bad?
+
+Not on its own. Over long periods, a currency tends to lose value against another when its inflation is higher. Indian inflation has run well above American inflation for most of the last 50 years. A steady fall in the rupee mostly reflects that gap.
+
+A weaker rupee makes imports such as oil, electronics and foreign education more expensive. It also makes Indian exports, from software services to textiles, cheaper for foreign buyers. What hurts is a sudden fall, as in 1991 and 2013, which makes planning hard for businesses and households.
+
+## How to read the chart
+
+The market rate line shows annual averages, so it smooths out sharp moves within a year. The steps before 1973 are official parities, not traded rates.

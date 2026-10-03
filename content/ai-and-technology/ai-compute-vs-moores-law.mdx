@@ -1,0 +1,57 @@
+Moore's Law says the number of transistors on a chip doubles about every two years. For fifty years it set the pace of the computer industry.
+
+The compute used to train the largest AI models has grown far faster. Epoch AI, a research group that tracks AI systems, estimates that training compute for notable models has grown 4 to 5 times every year since 2010. That is a doubling roughly every five to six months.
+
+## The largest training run each year
+
+<Figure
+  title="Compute used by the largest AI training run of each year"
+  subtitle="Floating point operations (FLOP), log scale. Each step on the axis is ten times the one below"
+  source="Epoch AI, Data on Notable AI Models (CC BY 4.0), accessed 3 October 2026"
+  note="The dashed line shows what Moore's Law growth, one doubling every two years, would have delivered from the 2010 level. Some recent values are Epoch estimates marked speculative."
+>
+  <LineChart
+    log
+    yTickFormat="exp"
+    series={[
+      { name: "Largest AI training run", color: "#1565c0", points: [[2010, 5.4e16], [2011, 5.2e16], [2012, 6.0e17], [2013, 2.61e18], [2014, 2.98e20], [2015, 3.8e20], [2016, 6.62e21], [2017, 8.43e20], [2018, 8.74e21], [2019, 1.08e23], [2020, 3.14e23], [2021, 2.05e24], [2022, 2.74e24], [2023, 5.0e25], [2024, 3.8e25], [2025, 5.0e26], [2026, 1.0e27]], hideEndLabel: true },
+      { name: "Moore's Law pace", color: "#8e5a9e", dashed: true, points: [[2010, 5.4e16], [2014, 2.16e17], [2018, 8.64e17], [2022, 3.46e18], [2026, 1.38e19]], hideEndLabel: true },
+    ]}
+  />
+</Figure>
+
+In 2010 the largest training run used about 5 × 10<sup>16</sup> operations. Epoch's estimate for the largest run published by September 2026 is 10<sup>27</sup>. That is an increase of about 18 billion times in 16 years.
+
+Moore's Law over the same years would have delivered an increase of 256 times.
+
+## Landmark models
+
+<Figure
+  title="Training compute of landmark AI models"
+  subtitle="FLOP, as estimated by Epoch AI"
+  source="Epoch AI, Data on Notable AI Models"
+>
+
+| Model | Released | Training compute (FLOP) | Epoch confidence |
+| --- | --- | --- | --- |
+| AlexNet | Sep 2012 | 4.7 × 10<sup>17</sup> | Confident |
+| Transformer | Jun 2017 | 7.4 × 10<sup>18</sup> | Confident |
+| BERT-Large | Oct 2018 | 2.9 × 10<sup>20</sup> | Confident |
+| GPT-3 | May 2020 | 3.1 × 10<sup>23</sup> | Confident |
+| PaLM | Apr 2022 | 2.5 × 10<sup>24</sup> | Confident |
+| Llama 3.1 405B | Jul 2024 | 3.8 × 10<sup>25</sup> | Confident |
+| Grok 4 | Jul 2025 | 5.0 × 10<sup>26</sup> | Speculative |
+
+</Figure>
+
+AlexNet, the image model that started the deep learning boom, used about 5 × 10<sup>17</sup> operations. Llama 3.1, released twelve years later, used about 80 million times as much.
+
+## Where the extra compute comes from
+
+Faster chips explain only part of the growth. Three other things did the rest.
+
+1. **More chips per run.** Training now runs on tens of thousands of GPUs or TPUs working together.
+2. **Longer runs.** Large models train for weeks or months.
+3. **More money.** Epoch estimates the cost of frontier training runs has grown about 2 to 3 times a year.
+
+Each of these has limits. Power supply, chip production and budgets will decide how long the trend can last. For now it shows no sign of matching the slower pace of Moore's Law.

@@ -1,0 +1,61 @@
+import shapes from "@/data/greenland-congo-shapes.json";
+import areas from "@/data/mercator-areas.json";
+
+export const pick = ["Greenland", "Canada", "Russia", "Finland", "United Kingdom", "United States of America", "Australia", "Brazil", "Dem. Rep. Congo", "Indonesia"];
+export const short = { "United States of America": "United States", "Dem. Rep. Congo": "DR Congo" };
+
+Greenland and the Democratic Republic of the Congo are almost the same size. Greenland covers about 2.15 million square kilometres. Congo covers about 2.33 million.
+
+Open most world maps and you would never guess it. Greenland looks as large as Africa. Congo looks like a modest country in the middle of it.
+
+<Figure
+  title="Same two countries, two projections"
+  subtitle="Left: the Mercator projection used by most web maps. Right: an equal area projection, where size on paper matches size on Earth. Both panels use the same scale"
+  source="Natural Earth boundaries; areas and projections computed by SankhyaIQ with d3-geo"
+>
+  <ShapeCompare
+    left={{ title: "Mercator", shapes: [
+      { name: "Greenland", d: shapes["Greenland"].merc.d, b: shapes["Greenland"].merc.b },
+      { name: "DR Congo", d: shapes["Dem. Rep. Congo"].merc.d, b: shapes["Dem. Rep. Congo"].merc.b },
+    ] }}
+    right={{ title: "Equal area", shapes: [
+      { name: "Greenland", d: shapes["Greenland"].ea.d, b: shapes["Greenland"].ea.b },
+      { name: "DR Congo", d: shapes["Dem. Rep. Congo"].ea.d, b: shapes["Dem. Rep. Congo"].ea.b },
+    ] }}
+  />
+</Figure>
+
+## Why maps lie about size
+
+Gerardus Mercator drew his map in 1569 for sailors. It keeps angles true, so a straight line on the map is a constant compass bearing. That made it ideal for navigation.
+
+The price is size. To keep angles true, Mercator stretches the map more and more as you move away from the equator. At 60 degrees north, every country is drawn four times larger than it should be. Near the poles the stretch heads towards infinity, which is why Antarctica looks like an endless white strip.
+
+Web maps still use a version of Mercator because it keeps streets at right angles when you zoom in. That is useful for directions. It is misleading for comparing countries.
+
+## How much each country is inflated
+
+We measured each country's true area on a globe and its area on a Mercator map. The ratio shows how many times bigger the map makes it look, relative to a country on the equator.
+
+<Figure
+  title="How much bigger countries look on a Mercator map"
+  subtitle="Area on a Mercator map divided by true area. A value of 1 means no inflation"
+  source="Natural Earth boundaries; calculations by SankhyaIQ"
+>
+  <BarChart
+    unit="x"
+    digits={1}
+    labelWidth={130}
+    data={areas.filter((a) => pick.includes(a.name)).map((a) => ({ label: short[a.name] ?? a.name, value: a.ratio, highlight: a.name === "Greenland" }))}
+  />
+</Figure>
+
+Greenland is inflated about 16 times. Canada and Russia look about five times their real size. The United States looks more than twice its size. Countries on the equator, like Congo, Indonesia and Brazil, are drawn almost true to size.
+
+## The real ranking
+
+On a globe, Africa covers about 30 million square kilometres. That is larger than the United States, China, India and most of Europe combined. Russia is still the largest country, at about 17 million square kilometres. But it is not the giant that dominates the top of a classroom map.
+
+<Callout>
+India sits between about 8 and 37 degrees north, so Mercator inflates it only slightly, by about a fifth. Its official area is 32.87 lakh square kilometres.
+</Callout>

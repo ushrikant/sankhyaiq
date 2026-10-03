@@ -69,28 +69,19 @@ export default function HomePage() {
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-1 h-5 bg-amber-400 rounded-full" />
                 <h2 className="font-plex text-xs font-semibold text-navy uppercase tracking-widest">
-                  India&apos;s renewable energy capacity, 2000-2026
+                  India&apos;s renewable power capacity, 2014 to 2026 (GW)
                 </h2>
               </div>
               <IndiaREChart />
               <p className="font-plex text-xs text-muted text-right mt-1">
-                Data from{" "}
+                31 March each year, latest 31 August 2026. Excludes large hydro (52.1 GW). Data from{" "}
                 <a
-                  href="https://www.irena.org/Data/Downloads/IRENASTAT"
+                  href="https://mnre.gov.in/en/year-wise-achievement/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline underline-offset-2 hover:text-navy"
                 >
-                  IRENA Statistics
-                </a>
-                {" "}and{" "}
-                <a
-                  href="https://mnre.gov.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-2 hover:text-navy"
-                >
-                  MNRE India
+                  MNRE
                 </a>
               </p>
             </div>
@@ -101,21 +92,21 @@ export default function HomePage() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-1 h-6 bg-cobalt rounded-full" />
               <h2 className="font-plex text-sm font-semibold text-navy uppercase tracking-widest">
-                Child mortality across the world, 1950-2023
+                Child mortality across the world, 1950 to 2024
               </h2>
             </div>
             <MortalityMap />
           </div>
 
           <p className="font-plex text-xs text-muted text-right">
-            This is the kind of story SankhyaIQ tells. Data from{" "}
+            Deaths before age five per 1,000 live births. Data from UN IGME via{" "}
             <a
-              href="https://ourworldindata.org/child-mortality"
+              href="https://childmortality.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-2 hover:text-navy"
             >
-              Our World in Data
+              childmortality.org
             </a>
           </p>
         </div>

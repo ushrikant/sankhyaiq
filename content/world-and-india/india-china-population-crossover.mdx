@@ -1,0 +1,42 @@
+import pop from "@/data/india-china-population.json";
+
+In 1950 China had 544 million people and India had 346 million. The gap was nearly 200 million. For the next seven decades China stayed ahead.
+
+The lines crossed in 2022 and 2023. By the UN's latest estimates, India had 1,451 million people in mid 2024 and China had 1,419 million.
+
+<Figure
+  title="Population of India and China, 1950 to 2100"
+  subtitle="Millions. Solid lines are estimates, dashed lines are UN medium variant projections"
+  source="UN World Population Prospects 2024"
+  note="Projections are mid-year values from the UN medium variant. The high and low variants differ by several hundred million by 2100."
+>
+  <LineChart
+    series={[
+      { name: "India", points: pop.observed["India"], color: "#1565c0", hideEndLabel: true },
+      { name: "China", points: pop.observed["China"], color: "#c56a1a", hideEndLabel: true },
+      { name: "India, projected", points: [[2024, 1450.9], ...pop.projected["India"]], color: "#1565c0", dashed: true },
+      { name: "China, projected", points: [[2024, 1419.3], ...pop.projected["China"]], color: "#c56a1a", dashed: true },
+    ]}
+    markers={[{ x: 2024, label: "2024" }]}
+  />
+</Figure>
+
+## Why the lines crossed
+
+China's population stopped growing because births fell sharply. The one child policy ran from 1980 to 2015. Fertility stayed low after it ended. China's population peaked in 2021 and has been falling since.
+
+India's fertility has also fallen. The average Indian woman now has about two children, close to the level that keeps a population stable. But India has a young population. A large number of people are still entering their child bearing years, so total population keeps rising for decades. Demographers call this population momentum.
+
+## What comes next
+
+<StatGrid
+  stats={[
+    { value: "1.70 bn", label: "India's projected peak, in the early 2060s" },
+    { value: "1.51 bn", label: "India in 2100, UN medium variant" },
+    { value: "633 m", label: "China in 2100, UN medium variant" },
+  ]}
+/>
+
+The UN expects India to peak at about 1.7 billion in the early 2060s and then decline slowly. China is expected to shrink much faster. By 2100 China's population could be less than half of today's.
+
+These are projections, not forecasts of certainty. Small changes in birth rates over decades add up to large differences. The direction is clear, though. India will be the world's most populous country for the rest of this century.

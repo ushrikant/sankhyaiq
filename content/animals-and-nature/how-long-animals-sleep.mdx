@@ -1,0 +1,54 @@
+import sleep from "@/data/mammal-sleep.json";
+
+export const labelled = ["Little brown bat", "Giant armadillo", "Tiger", "Domestic cat", "Human", "Dog", "Cow", "Asian elephant", "Giraffe", "Horse", "Laboratory rat"];
+
+A little brown bat sleeps close to 20 hours a day. A giraffe sleeps under two. Humans sit near the middle, at about eight.
+
+The numbers come from a 2007 study by Van Savage and Geoffrey West, who compiled sleep records for dozens of mammals. The dataset used here covers 83 species.
+
+<Figure
+  title="Body weight and daily sleep in 83 mammals"
+  subtitle="Hours of sleep per day against body weight in kg (log scale)"
+  source="Savage and West (2007), PNAS, via the msleep dataset"
+>
+  <Scatter
+    logX
+    xLabel="Body weight, kg (log scale)"
+    yLabel="Sleep, hours per day"
+    points={sleep.map(([name, hours, kg]) => ({ label: name, x: kg, y: hours, highlight: labelled.includes(name) }))}
+  />
+</Figure>
+
+## Big bodies, short sleep
+
+On average, small mammals sleep more and large ones sleep less. There are exceptions. Tigers and giant armadillos sleep long hours despite their size.
+
+<BarChart
+  unit=" h"
+  digits={1}
+  labelWidth={150}
+  data={[
+    { label: "Little brown bat", value: 19.9 },
+    { label: "Big brown bat", value: 19.7 },
+    { label: "Tiger", value: 15.8 },
+    { label: "Domestic cat", value: 12.5 },
+    { label: "Dog", value: 10.1 },
+    { label: "Human", value: 8.0, highlight: true },
+    { label: "Cow", value: 4.0 },
+    { label: "Asian elephant", value: 3.9 },
+    { label: "Horse", value: 2.9 },
+    { label: "Giraffe", value: 1.9 },
+  ]}
+/>
+
+<p className="font-plex text-xs text-muted -mt-2 mb-6">Hours of sleep per day. Source: Savage and West (2007), via msleep.</p>
+
+Researchers have proposed two explanations. Small animals burn energy fast relative to their size. Sleep may help them repair the damage. Large plant eaters also need many hours a day to eat enough, which leaves less time for sleep. Lying down for long is risky for an animal that predators hunt.
+
+Diet matters less than size. In this dataset, meat eaters and plant eaters both sleep a median of about 10 hours. Insect eaters, mostly bats and small mammals, sleep a median of 18.
+
+## A note on the data
+
+Sleep is hard to measure in the wild. Many of these figures come from animals in zoos or laboratories, where they are safe and well fed. Wild animals may sleep less. Treat the numbers as a guide to the pattern, not exact values for every species.
+
+For more surprising animal comparisons, see our ten Field Notes plates on the [Animals and Nature page](/animals-and-nature).

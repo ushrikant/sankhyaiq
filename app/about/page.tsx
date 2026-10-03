@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import NewsletterStrip from "@/components/NewsletterStrip";
 import type { Metadata } from "next";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About | SankhyaIQ",
@@ -50,12 +51,12 @@ export default function AboutPage() {
 
           <h3 className="font-playfair text-lg font-semibold text-navy mb-3">Visualisation</h3>
           <p className="font-plex text-base text-muted leading-relaxed mb-10">
-            We use Datawrapper and Flourish for interactive charts. The goal is always clarity, not complexity. A chart that needs a legend longer than itself has failed its purpose.
+            Charts on SankhyaIQ are drawn directly from the data files that sit alongside each story, so every number on a chart can be traced to its source. The goal is always clarity, not complexity. A chart that needs a legend longer than itself has failed its purpose.
           </p>
 
           <hr className="border-gray-100 my-10" />
 
-          <h2 className="font-playfair text-2xl font-bold text-navy mb-5">Indian data sources we rely on</h2>
+          <h2 className="font-playfair text-2xl font-bold text-navy mb-5">Data sources we rely on</h2>
           <ul className="space-y-3 mb-10">
             {[
               "Census of India and ORGI (Office of the Registrar General)",
@@ -66,6 +67,11 @@ export default function AboutPage() {
               "NITI Aayog datasets and SDG India Index",
               "Open Government Data (OGD) Platform (data.gov.in)",
               "ISRO and DST for science and space stories",
+              "Survey of India and the National Hydrographic Office (maps and coastline)",
+              "NTCA and state forest departments (tiger and lion estimations)",
+              "UN World Population Prospects (population and projections)",
+              "Maddison Project Database and Our World in Data (long run economic and emissions data)",
+              "NASA Exoplanet Archive and Epoch AI (space and AI data)",
             ].map((source) => (
               <li key={source} className="flex gap-3 items-start">
                 <span
@@ -81,7 +87,7 @@ export default function AboutPage() {
 
           <h2 className="font-playfair text-2xl font-bold text-navy mb-4">Corrections policy</h2>
           <p className="font-plex text-base text-muted leading-relaxed">
-            If you spot an error, please reach out. We will correct it promptly and note the correction at the bottom of the story. Getting it right matters more than getting it first.
+            If you spot an error, please reach out{site.contactEmail ? <> at <a href={`mailto:${site.contactEmail}`} className="underline underline-offset-2">{site.contactEmail}</a></> : null}. We will correct it promptly and note the correction at the bottom of the story. Getting it right matters more than getting it first.
           </p>
         </div>
       </main>

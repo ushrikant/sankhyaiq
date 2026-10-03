@@ -1,0 +1,51 @@
+import co2 from "@/data/co2-per-person.json";
+
+India emitted 3.19 billion tonnes of carbon dioxide from fossil fuels and cement in 2024. Only China and the United States emitted more. That makes India the third largest emitter in the world.
+
+Divide by population and the picture changes. Each Indian accounted for 2.2 tonnes. The world average was 4.7 tonnes. An average American accounted for 14.2.
+
+<Figure
+  title="Carbon dioxide emissions per person, 1950 to 2024"
+  subtitle="Tonnes of CO2 per person per year, fossil fuels and cement"
+  source="Global Carbon Budget 2025, via Our World in Data"
+  note="Excludes emissions from land use change."
+>
+  <LineChart
+    digits={1}
+    yUnit=" t"
+    series={[
+      { name: "India", points: co2["India"], color: "#1565c0" },
+      { name: "World", points: co2["World"], color: "#8e5a9e" },
+      { name: "China", points: co2["China"], color: "#c56a1a" },
+      { name: "United States", points: co2["United States"], color: "#2e7d32" },
+    ]}
+  />
+</Figure>
+
+## Rising, but from a low base
+
+India's emissions per person have grown steadily. They were 0.7 tonnes in 1990, 1.4 tonnes in 2010 and 2.2 tonnes in 2024. That is more than three times the 1990 level.
+
+China shows where this path can lead. In 1990 China emitted 2.2 tonnes per person, the same as India today. By 2024 it emitted 8.7 tonnes, well above the European Union at 5.4.
+
+The United States and Europe are moving the other way. American emissions per person peaked above 22 tonnes in the 1970s and have fallen since.
+
+## The stock matters more than the flow
+
+Carbon dioxide stays in the air for centuries. Warming depends on the total ever emitted, not on one year.
+
+<BarChart
+  unit="%"
+  digits={1}
+  data={[
+    { label: "United States", value: 23.5 },
+    { label: "China", value: 15.4 },
+    { label: "India", value: 3.6, highlight: true },
+  ]}
+/>
+
+<p className="font-plex text-xs text-muted -mt-2 mb-6">Share of all fossil CO2 emitted from 1750 to 2024. Source: Global Carbon Budget 2025, via Our World in Data.</p>
+
+India has 18% of the world's people. It is responsible for 3.6% of all the carbon dioxide emitted since 1750. The United States, with about 4% of the world's people, is responsible for 23.5%.
+
+This is the core of India's position in climate talks. The country is now a large annual emitter. Its historical share remains small.

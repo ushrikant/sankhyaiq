@@ -1,0 +1,50 @@
+import gdp from "@/data/gdp-per-person.json";
+
+Average income in India in 1947 was about $948 a year, in 2011 international dollars. In 1850 it had been about $947. For a hundred years, the average Indian got no richer.
+
+Since independence, average income has grown nearly eight times, to $7,350 in 2022. More than four fifths of that rise came after 1991.
+
+<Figure
+  title="GDP per person, India, China and the world, 1850 to 2022"
+  subtitle="2011 international dollars, adjusted for prices across countries and over time"
+  source="Maddison Project Database 2023, via Our World in Data"
+  note="Values before 1950 are available only for some years and are historical estimates."
+>
+  <LineChart
+    yPrefix="$"
+    markers={[{ x: 1947, label: "1947" }, { x: 1991, label: "1991" }]}
+    series={[
+      { name: "India", points: gdp["India"], color: "#1565c0" },
+      { name: "World", points: gdp["World"], color: "#8e5a9e" },
+      { name: "China", points: gdp["China"], color: "#c56a1a" },
+    ]}
+  />
+</Figure>
+
+## Four phases
+
+<StatGrid
+  stats={[
+    { value: "$947", label: "1850" },
+    { value: "$948", label: "1947" },
+    { value: "$2,001", label: "1991" },
+    { value: "$7,350", label: "2022" },
+  ]}
+/>
+
+1. **1850 to 1947: stagnation.** Under colonial rule, output grew about as fast as population. Income per person did not move.
+2. **1947 to 1980: slow growth.** Income rose about 1.4% a year. Population grew fast, so gains per person were small.
+3. **1980 to 1991: a pickup.** Growth per person rose to close to 3% a year through the 1980s.
+4. **1991 onwards: the take off.** After the 1991 reforms, income per person grew about 4.3% a year. It took 42 years to double after 1947. After 1991 it doubled in 18 years, then nearly doubled again by 2022.
+
+## The China comparison
+
+In 1950 China was poorer than India. China's income per person was $803, against India's $1,023.
+
+China moved ahead in the 1970s and pulled away fast after 1980. By 2022 China's average income was $18,921, about two and a half times India's. India is still below the world average of $16,221.
+
+## What international dollars mean
+
+These figures are not today's rupees or dollars. They are adjusted for inflation and for the fact that money buys more in India than in the United States. That makes incomes comparable across time and across countries.
+
+At market exchange rates the dollar figures are lower, because prices in India are lower. The shape of the story is the same either way: a long flat line, then a steep climb.

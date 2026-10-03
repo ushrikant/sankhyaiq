@@ -52,3 +52,16 @@ h1, h2, h3, h4, h5, h6 {
 .prose a:hover {
   color: #0d2b52;
 }
+
+/* Chart text uses the body font. CSS beats the SVG presentation attribute. */
+figure svg text,
+svg[role="img"] text {
+  font-family: var(--font-ibm-plex-sans), system-ui, sans-serif;
+}
+
+/* On phones the charts shrink to about half size, so lift chart text to stay readable. */
+@media (max-width: 640px) {
+  svg.chart-scale text {
+    font-size: 18px;
+  }
+}

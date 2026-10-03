@@ -13,7 +13,7 @@ export const sections: Section[] = [
   {
     slug: "world-and-india",
     label: "World & India",
-    descriptor: "How India fits in the world picture, and where the world is headed",
+    descriptor: "How India fits in the world picture and where the world is headed",
     color: "#1565c0",
     bgClass: "bg-cobalt",
     textClass: "text-cobalt",
@@ -83,7 +83,7 @@ export const sections: Section[] = [
   {
     slug: "science-and-space",
     label: "Science & Space",
-    descriptor: "The universe in numbers, from exoplanets to protein folding",
+    descriptor: "The universe in numbers, from exoplanets to the Big Bang",
     color: "#004d40",
     bgClass: "bg-teal-900",
     textClass: "text-teal-900",

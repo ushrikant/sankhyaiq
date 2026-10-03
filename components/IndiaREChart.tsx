@@ -5,47 +5,37 @@ import { useEffect, useRef, useCallback, useState } from "react";
 // ─── Data ────────────────────────────────────────────────────────────────────
 interface YearData {
   year: number;
-  largeHydro: number;
+  label: string;
   smallHydro: number;
   biomass: number;
   wind: number;
   solar: number;
 }
 
+// Cumulative capacity in GW at each financial year end (31 March), plus the latest month.
+// Built from MNRE's "Year wise Achievements" (cumulative to March 2014 plus yearly additions)
+// and the MNRE physical progress page as on 31 August 2026. Large hydro is excluded, as in MNRE's series.
+// Biomass = bagasse and non-bagasse cogeneration plus waste to energy.
 const RE_DATA: YearData[] = [
-  { year: 2000, largeHydro: 26.3, smallHydro: 1.5, biomass: 1.0, wind: 1.3,  solar: 0.0  },
-  { year: 2001, largeHydro: 27.0, smallHydro: 1.6, biomass: 1.1, wind: 1.7,  solar: 0.0  },
-  { year: 2002, largeHydro: 28.1, smallHydro: 1.7, biomass: 1.3, wind: 2.1,  solar: 0.0  },
-  { year: 2003, largeHydro: 29.5, smallHydro: 1.8, biomass: 1.5, wind: 2.6,  solar: 0.0  },
-  { year: 2004, largeHydro: 30.9, smallHydro: 1.9, biomass: 1.7, wind: 3.1,  solar: 0.0  },
-  { year: 2005, largeHydro: 32.3, smallHydro: 2.0, biomass: 1.9, wind: 4.4,  solar: 0.0  },
-  { year: 2006, largeHydro: 33.8, smallHydro: 2.1, biomass: 2.1, wind: 6.3,  solar: 0.0  },
-  { year: 2007, largeHydro: 35.4, smallHydro: 2.2, biomass: 2.4, wind: 7.9,  solar: 0.0  },
-  { year: 2008, largeHydro: 36.9, smallHydro: 2.3, biomass: 2.7, wind: 9.7,  solar: 0.0  },
-  { year: 2009, largeHydro: 38.0, smallHydro: 2.5, biomass: 3.0, wind: 11.8, solar: 0.0  },
-  { year: 2010, largeHydro: 38.9, smallHydro: 2.7, biomass: 3.4, wind: 13.1, solar: 0.0  },
-  { year: 2011, largeHydro: 39.7, smallHydro: 2.9, biomass: 3.7, wind: 16.2, solar: 0.5  },
-  { year: 2012, largeHydro: 40.5, smallHydro: 3.1, biomass: 4.0, wind: 18.4, solar: 1.0  },
-  { year: 2013, largeHydro: 42.0, smallHydro: 3.3, biomass: 4.4, wind: 20.2, solar: 2.2  },
-  { year: 2014, largeHydro: 43.3, smallHydro: 3.6, biomass: 4.8, wind: 22.5, solar: 3.7  },
-  { year: 2015, largeHydro: 44.5, smallHydro: 3.8, biomass: 5.1, wind: 25.1, solar: 5.8  },
-  { year: 2016, largeHydro: 44.8, smallHydro: 4.0, biomass: 5.4, wind: 28.7, solar: 9.0  },
-  { year: 2017, largeHydro: 45.6, smallHydro: 4.3, biomass: 5.8, wind: 32.8, solar: 16.5 },
-  { year: 2018, largeHydro: 46.0, smallHydro: 4.5, biomass: 6.2, wind: 35.1, solar: 26.9 },
-  { year: 2019, largeHydro: 46.5, smallHydro: 4.7, biomass: 6.6, wind: 37.7, solar: 35.1 },
-  { year: 2020, largeHydro: 46.8, smallHydro: 4.9, biomass: 7.2, wind: 38.6, solar: 40.1 },
-  { year: 2021, largeHydro: 47.1, smallHydro: 5.0, biomass: 7.8, wind: 40.4, solar: 52.9 },
-  { year: 2022, largeHydro: 47.2, smallHydro: 5.1, biomass: 8.4, wind: 42.8, solar: 67.1 },
-  { year: 2023, largeHydro: 47.4, smallHydro: 5.2, biomass: 9.0, wind: 44.7, solar: 81.8 },
-  { year: 2024, largeHydro: 47.6, smallHydro: 5.3, biomass: 9.9, wind: 47.4, solar: 97.8 },
-  { year: 2025, largeHydro: 47.8, smallHydro: 5.5, biomass: 10.5,wind: 50.0, solar: 120.0},
-  { year: 2026, largeHydro: 48.0, smallHydro: 5.7, biomass: 11.0,wind: 53.0, solar: 150.0},
+  { year: 2014, label: "2014", smallHydro: 3.80, biomass: 8.18,  wind: 21.04, solar: 2.82 },
+  { year: 2015, label: "2015", smallHydro: 4.06, biomass: 8.55,  wind: 23.35, solar: 3.99 },
+  { year: 2016, label: "2016", smallHydro: 4.27, biomass: 8.92,  wind: 26.78, solar: 7.12 },
+  { year: 2017, label: "2017", smallHydro: 4.38, biomass: 9.12,  wind: 32.28, solar: 12.78 },
+  { year: 2018, label: "2018", smallHydro: 4.49, biomass: 9.67,  wind: 34.15, solar: 22.35 },
+  { year: 2019, label: "2019", smallHydro: 4.59, biomass: 10.10, wind: 35.63, solar: 29.10 },
+  { year: 2020, label: "2020", smallHydro: 4.68, biomass: 10.22, wind: 37.74, solar: 35.61 },
+  { year: 2021, label: "2021", smallHydro: 4.79, biomass: 10.53, wind: 39.25, solar: 41.24 },
+  { year: 2022, label: "2022", smallHydro: 4.85, biomass: 10.68, wind: 40.36, solar: 54.00 },
+  { year: 2023, label: "2023", smallHydro: 4.94, biomass: 10.80, wind: 42.63, solar: 66.78 },
+  { year: 2024, label: "2024", smallHydro: 5.00, biomass: 10.94, wind: 45.89, solar: 81.81 },
+  { year: 2025, label: "2025", smallHydro: 5.10, biomass: 11.58, wind: 50.04, solar: 105.65 },
+  { year: 2026, label: "2026", smallHydro: 5.17, biomass: 11.75, wind: 56.09, solar: 150.26 },
+  { year: 2027, label: "Aug 26", smallHydro: 5.18, biomass: 11.75, wind: 58.52, solar: 168.04 },
 ];
 
 const CATEGORIES = [
-  { key: "largeHydro", label: "Large Hydro", color: "#1d4ed8" },
   { key: "smallHydro", label: "Small Hydro", color: "#38bdf8" },
-  { key: "biomass",    label: "Biomass",     color: "#22c55e" },
+  { key: "biomass",    label: "Bio-power",   color: "#22c55e" },
   { key: "wind",       label: "Wind",        color: "#06b6d4" },
   { key: "solar",      label: "Solar",       color: "#fbbf24" },
 ] as const;
@@ -53,7 +43,7 @@ const CATEGORIES = [
 type CatKey = (typeof CATEGORIES)[number]["key"];
 
 function totalGW(d: YearData) {
-  return d.largeHydro + d.smallHydro + d.biomass + d.wind + d.solar;
+  return d.smallHydro + d.biomass + d.wind + d.solar;
 }
 
 // ─── Layout constants ─────────────────────────────────────────────────────────
@@ -65,10 +55,10 @@ const PAD_T = 60;
 const PAD_B = 50;
 const CW = W - PAD_L - PAD_R;
 const CH = H - PAD_T - PAD_B;
-const N = RE_DATA.length; // 27
+const N = RE_DATA.length;
 const SLOT = CW / N;
 const BAR_W = Math.max(10, SLOT - 6);
-const MAX_GW = 280;
+const MAX_GW = 260;
 const PX_PER_GW = CH / MAX_GW;
 
 const SUN_R_NORMAL = 10;
@@ -245,7 +235,7 @@ export default function IndiaREChart() {
           viewBox={`0 0 ${W} ${H}`}
           width="100%"
           style={{ minWidth: 400, display: "block" }}
-          aria-label="India renewable energy capacity 2000–2026"
+          aria-label="India renewable energy capacity, March 2014 to August 2026"
         >
           {/* ── Y gridlines & labels ── */}
           {yTicks.map(gw => {
@@ -276,7 +266,7 @@ export default function IndiaREChart() {
             const bx = barX(i);
             let stackY = PAD_T + CH;
             return (
-              <g key={d.year}>
+              <g key={d.label}>
                 {CATEGORIES.map(cat => {
                   const gw = d[cat.key as CatKey];
                   const barH = gw * PX_PER_GW;
@@ -292,13 +282,13 @@ export default function IndiaREChart() {
                   );
                 })}
                 {/* X-axis year label — show every 5 years or at last bar */}
-                {(d.year % 5 === 0 || i === N - 1) && (
+                {(d.year % 2 === 0 || i === N - 1) && (
                   <text
                     x={bx + BAR_W / 2} y={PAD_T + CH + 14}
                     textAnchor="middle" fontSize={9} fill="#64748b"
                     fontFamily="'IBM Plex Sans', sans-serif"
                   >
-                    {d.year}
+                    {d.label}
                   </text>
                 )}
               </g>
@@ -371,13 +361,13 @@ export default function IndiaREChart() {
                 textAnchor="middle" fontSize={11} fontWeight="700" fill="#92400e"
                 fontFamily="'IBM Plex Sans', sans-serif"
               >
-                India: 300+ GW Renewable
+                243.5 GW, Aug 2026
               </text>
               <text x={PAD_L + 86} y={PAD_T + 38}
                 textAnchor="middle" fontSize={10} fill="#b45309"
                 fontFamily="'IBM Plex Sans', sans-serif"
               >
-                Target 500 GW by 2030 ☀
+                295.6 GW with large hydro
               </text>
             </g>
           )}
@@ -388,7 +378,7 @@ export default function IndiaREChart() {
               fontSize={13} fontWeight="700" fill="#1d4ed8"
               fontFamily="'Playfair Display', serif"
             >
-              {RE_DATA[idx].year}: {totalGW(RE_DATA[idx]).toFixed(1)} GW
+              {RE_DATA[idx].label}: {totalGW(RE_DATA[idx]).toFixed(1)} GW
             </text>
           )}
         </svg>

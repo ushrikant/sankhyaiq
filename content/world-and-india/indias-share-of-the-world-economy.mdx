@@ -1,0 +1,52 @@
+import share from "@/data/gdp-share.json";
+
+In 1850 India produced about one seventh of everything made in the world. A century later it produced one twenty fourth. The share bottomed out around 1980. It has more than doubled since.
+
+The numbers come from the Maddison Project, the standard long run record of world output. All values are in 2011 international dollars, which adjust for price differences between countries.
+
+<Figure
+  title="Share of world GDP, 1850 to 2022"
+  subtitle="Per cent of world output, in 2011 international dollars"
+  source="Maddison Project Database 2023, via Our World in Data"
+  note="Values before 1950 are spaced decades apart. Pre-1947 figures are historical estimates and carry wide margins."
+>
+  <LineChart
+    yUnit="%"
+    digits={1}
+    markers={[{ x: 1947, label: "1947" }, { x: 1991, label: "1991" }]}
+    series={[
+      { name: "India", points: share["India"], color: "#1565c0" },
+      { name: "China", points: share["China"], color: "#c56a1a" },
+      { name: "United States", points: share["United States"], color: "#2e7d32" },
+    ]}
+  />
+</Figure>
+
+## The long fall
+
+India's share fell from 14.4% in 1850 to 4.2% in 1950. Two things drove it.
+
+1. The rest of the world industrialised. Britain, Europe and then the United States grew fast for a hundred years.
+2. India did not grow at all. Income per person in 1947 was about the same as in 1850. Our [companion story](/money-and-economy/india-gdp-per-capita-journey) shows that flat line.
+
+The fall did not stop at independence. India grew after 1950, but the world grew faster. India's share kept slipping until it reached 3.2% in 1980.
+
+## The climb back
+
+The turn came in the 1980s and sped up after the 1991 reforms. India's share rose to 4.7% in 2000, 6.0% in 2010 and 8.1% in 2022.
+
+China's path is sharper. It fell further, to about 5% in the 1950s, then rose faster. By 2022 China produced 20.7% of world output, more than the United States at 15.0%.
+
+<StatGrid
+  stats={[
+    { value: "14.4%", label: "India's share of world GDP in 1850" },
+    { value: "3.2%", label: "The low point, in 1980" },
+    { value: "8.1%", label: "India's share in 2022" },
+  ]}
+/>
+
+## What the chart does not say
+
+Share of world output is not the same as living standards. India has about 18% of the world's people and 8% of its output. Average income is still well below the world average. The gap is closing, but it is large.
+
+The measure also uses purchasing power. At market exchange rates India's share is smaller, because prices in India are lower than in rich countries.

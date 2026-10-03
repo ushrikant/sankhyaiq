@@ -1,0 +1,58 @@
+import ex from "@/data/exoplanets-by-year.json";
+
+An exoplanet is a planet that orbits a star other than the Sun. Until 1992 nobody had confirmed one. As of 3 October 2026, NASA's Exoplanet Archive lists 6,375.
+
+<StatGrid
+  stats={[
+    { value: "6,375", label: "Confirmed exoplanets, NASA Exoplanet Archive" },
+    { value: "4,711", label: "Found by the transit method" },
+    { value: "1,504", label: "Confirmed in 2016, the record year" },
+  ]}
+/>
+
+## Discoveries year by year
+
+<Figure
+  title="Exoplanets confirmed each year, by year of discovery"
+  subtitle="All methods. 2026 is a partial year, to 3 October"
+  source="NASA Exoplanet Archive, Planetary Systems Composite table, queried 3 October 2026"
+>
+  <ColumnChart
+    color="#1565c0"
+    labelEvery={4}
+    data={ex.filter((r) => r[0] >= 1995).map(([year, n]) => ({ label: String(year), value: n, showValue: year === 2014 || year === 2016 || year === 2021 }))}
+  />
+</Figure>
+
+The chart has two huge spikes, in 2014 and 2016. Both came from NASA's Kepler space telescope. Kepler watched about 1.5 lakh stars for four years, looking for tiny dips in brightness when a planet passed in front. Its data was then confirmed in large batches. In 2016 alone, more than 1,400 transit planets were confirmed.
+
+The smaller peak in 2021 partly reflects NASA's TESS mission, which scans almost the whole sky.
+
+## How planets are found
+
+<Figure
+  title="Confirmed exoplanets by discovery method"
+  subtitle="All years to 3 October 2026"
+  source="NASA Exoplanet Archive"
+>
+  <BarChart
+    color="#1565c0"
+    labelWidth={150}
+    data={[
+      { label: "Transit", value: 4711 },
+      { label: "Radial velocity", value: 1203 },
+      { label: "Microlensing", value: 292 },
+      { label: "Direct imaging", value: 97 },
+      { label: "Timing methods", value: 56 },
+      { label: "Other", value: 16 },
+    ]}
+  />
+</Figure>
+
+1. **Transit.** A planet crosses its star and blocks a little light. Kepler and TESS use this method. It finds about three in four planets.
+2. **Radial velocity.** A planet tugs its star back and forth. The star's light shifts slightly in colour. This method found the first planet around a Sun-like star, in 1995.
+3. **Microlensing and imaging.** These find a few hundred planets between them. Imaging takes an actual picture of the planet, which is only possible for large planets far from their star.
+
+## What comes next
+
+Finding planets is no longer the hard part. The new work is studying them. The James Webb Space Telescope can now read the gases in some exoplanet atmospheres. The question it is chasing is whether any of these worlds could support life.
