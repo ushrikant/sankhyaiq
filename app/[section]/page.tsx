@@ -8,6 +8,8 @@ import NewsletterStrip from "@/components/NewsletterStrip";
 import AnimalComparisons from "@/components/AnimalComparisons";
 import { getSectionBySlug, sections } from "@/lib/sections";
 import { getStoriesBySection } from "@/lib/stories";
+import DashboardCard from "@/components/dashboards/DashboardCard";
+import { getDashboardsBySection } from "@/lib/dashboards";
 
 const SECTION_FEATURES: Record<string, React.ComponentType> = {
   "animals-and-nature": AnimalComparisons,
@@ -35,6 +37,7 @@ export default function SectionPage({ params }: Props) {
   if (!section) notFound();
 
   const stories = getStoriesBySection(section.slug);
+  const sectionDashboards = getDashboardsBySection(section.slug);
 
   const otherSections = sections
     .filter((s) => s.slug !== section.slug)
@@ -52,6 +55,20 @@ export default function SectionPage({ params }: Props) {
           <div className="max-w-4xl mx-auto mb-16">
             <SectionFeature />
           </div>
+        )}
+
+        {sectionDashboards.length > 0 && (
+          <section className="mb-16">
+            <div className="flex items-baseline justify-between mb-6">
+              <h2 className="font-playfair text-2xl font-bold text-navy">Dashboards</h2>
+              <Link href="/dashboards" className="font-plex text-sm text-cobalt hover:text-navy underline underline-offset-2">All dashboards</Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {sectionDashboards.map((d) => (
+                <DashboardCard key={d.slug} d={d} />
+              ))}
+            </div>
+          </section>
         )}
 
         {/* Stories grid */}

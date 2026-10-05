@@ -22,7 +22,7 @@ export default function Navbar() {
               className="rounded-full"
               priority
             />
-            <span className="font-playfair text-xl font-bold text-navy hidden sm:block">
+            <span className="font-playfair text-xl font-bold text-navy hidden 2xl:block">
               SankhyaIQ
             </span>
           </Link>
@@ -33,11 +33,17 @@ export default function Navbar() {
               <Link
                 key={s.slug}
                 href={`/${s.slug}`}
-                className="px-3 py-1.5 text-sm font-plex text-muted hover:text-navy hover:bg-surface rounded-md transition-colors whitespace-nowrap"
+                className="px-2 py-1.5 text-[13px] font-plex text-muted hover:text-navy hover:bg-surface rounded-md transition-colors whitespace-nowrap"
               >
                 {s.label}
               </Link>
             ))}
+            <Link
+              href="/dashboards"
+              className="px-2 py-1.5 text-[13px] font-plex font-semibold text-cobalt hover:text-navy hover:bg-surface rounded-md transition-colors whitespace-nowrap"
+            >
+              Dashboards
+            </Link>
             <Link
               href="/newsletter"
               className="ml-3 px-4 py-1.5 bg-cobalt text-white text-sm font-plex font-medium rounded-full hover:bg-navy transition-colors"
@@ -78,6 +84,13 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
+          <Link
+            href="/dashboards"
+            onClick={() => setMenuOpen(false)}
+            className="mt-2 block text-center px-3 py-2 text-sm font-plex font-semibold text-cobalt bg-surface rounded-md"
+          >
+            Dashboards
+          </Link>
           <Link
             href="/newsletter"
             onClick={() => setMenuOpen(false)}

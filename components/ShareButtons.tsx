@@ -21,7 +21,7 @@ export default function ShareButtons({ title, url }: ShareButtonsProps) {
   const encodedTitle = encodeURIComponent(title);
 
   return (
-    <div className="flex items-center gap-3 mt-10">
+    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-10">
       <span className="font-plex text-xs font-semibold uppercase tracking-widest text-muted">
         Share
       </span>
