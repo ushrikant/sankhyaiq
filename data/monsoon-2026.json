@@ -1,0 +1,326 @@
+{
+  "season": {
+    "mm": 759.4,
+    "lpa_mm": 868.6,
+    "pct": 87
+  },
+  "months": [
+    {
+      "m": "Jun",
+      "pct": 65,
+      "mm": 106.8,
+      "lpa_mm": 165.3
+    },
+    {
+      "m": "Jul",
+      "pct": 101,
+      "mm": null,
+      "lpa_mm": null
+    },
+    {
+      "m": "Aug",
+      "pct": 84,
+      "mm": 213.3,
+      "lpa_mm": null
+    },
+    {
+      "m": "Sep",
+      "pct": 92,
+      "mm": null,
+      "lpa_mm": null
+    }
+  ],
+  "regions": [
+    {
+      "name": "North West India",
+      "pct": 94,
+      "mm": 553
+    },
+    {
+      "name": "Central India",
+      "pct": 97,
+      "mm": 952.8
+    },
+    {
+      "name": "South Peninsula",
+      "pct": 76,
+      "mm": 542.0
+    },
+    {
+      "name": "East and North East India",
+      "pct": 74,
+      "mm": 1016.3
+    }
+  ],
+  "subdivisions": [
+    {
+      "name": "CHHATTISGARH",
+      "departure_pct": 5,
+      "category": "Normal"
+    },
+    {
+      "name": "EAST MADHYA PRADESH",
+      "departure_pct": 4,
+      "category": "Normal"
+    },
+    {
+      "name": "GUJARAT REGION",
+      "departure_pct": -1,
+      "category": "Normal"
+    },
+    {
+      "name": "KONKAN & GOA",
+      "departure_pct": -15,
+      "category": "Normal"
+    },
+    {
+      "name": "MADHYA MAHARASHTRA",
+      "departure_pct": -7,
+      "category": "Normal"
+    },
+    {
+      "name": "MARATHWADA",
+      "departure_pct": -39,
+      "category": "Deficient"
+    },
+    {
+      "name": "ODISHA",
+      "departure_pct": 29,
+      "category": "Excess"
+    },
+    {
+      "name": "SAURASHTRA & KUTCH",
+      "departure_pct": -23,
+      "category": "Deficient"
+    },
+    {
+      "name": "VIDARBHA",
+      "departure_pct": -27,
+      "category": "Deficient"
+    },
+    {
+      "name": "WEST MADHYA PRADESH",
+      "departure_pct": -12,
+      "category": "Normal"
+    },
+    {
+      "name": "ARUNACHAL PRADESH",
+      "departure_pct": -44,
+      "category": "Deficient"
+    },
+    {
+      "name": "ASSAM & MEGHALAYA",
+      "departure_pct": -33,
+      "category": "Deficient"
+    },
+    {
+      "name": "BIHAR",
+      "departure_pct": -32,
+      "category": "Deficient"
+    },
+    {
+      "name": "GANGETIC WEST BENGAL",
+      "departure_pct": 8,
+      "category": "Normal"
+    },
+    {
+      "name": "JHARKHAND",
+      "departure_pct": -4,
+      "category": "Normal"
+    },
+    {
+      "name": "NMMT",
+      "departure_pct": -22,
+      "category": "Deficient"
+    },
+    {
+      "name": "SHWB & SIKKIM",
+      "departure_pct": -10,
+      "category": "Normal"
+    },
+    {
+      "name": "DELHI AND HARYANA AND CHANDIGARH",
+      "departure_pct": -23,
+      "category": "Deficient"
+    },
+    {
+      "name": "EAST RAJASTHAN",
+      "departure_pct": -17,
+      "category": "Normal"
+    },
+    {
+      "name": "EAST UTTAR PRADESH",
+      "departure_pct": 2,
+      "category": "Normal"
+    },
+    {
+      "name": "HIMACHAL PRADESH",
+      "departure_pct": -10,
+      "category": "Normal"
+    },
+    {
+      "name": "JAMMU & KASHMIR AND LADAKH",
+      "departure_pct": -3,
+      "category": "Normal"
+    },
+    {
+      "name": "PUNJAB",
+      "departure_pct": -41,
+      "category": "Deficient"
+    },
+    {
+      "name": "UTTARAKHAND",
+      "departure_pct": 9,
+      "category": "Normal"
+    },
+    {
+      "name": "WEST RAJASTHAN",
+      "departure_pct": -30,
+      "category": "Deficient"
+    },
+    {
+      "name": "WEST UTTAR PRADESH",
+      "departure_pct": 17,
+      "category": "Normal"
+    },
+    {
+      "name": "ANDAMAN & NICOBAR ISLANDS",
+      "departure_pct": 8,
+      "category": "Normal"
+    },
+    {
+      "name": "COASTAL ANDHRA PRADESH & YANAM",
+      "departure_pct": -17,
+      "category": "Normal"
+    },
+    {
+      "name": "COASTAL KARNATAKA",
+      "departure_pct": -28,
+      "category": "Deficient"
+    },
+    {
+      "name": "KERALA & MAHE",
+      "departure_pct": -28,
+      "category": "Deficient"
+    },
+    {
+      "name": "LAKSHADWEEP",
+      "departure_pct": -29,
+      "category": "Deficient"
+    },
+    {
+      "name": "NORTHERN INTERIOR KARNATAKA",
+      "departure_pct": -31,
+      "category": "Deficient"
+    },
+    {
+      "name": "RAYALSEEMA",
+      "departure_pct": -40,
+      "category": "Deficient"
+    },
+    {
+      "name": "SOUTHERN INTERIOR KARNATAKA",
+      "departure_pct": -31,
+      "category": "Deficient"
+    },
+    {
+      "name": "TAMILNADU & PUDUCHERRY & KARAIKAL",
+      "departure_pct": -20,
+      "category": "Deficient"
+    },
+    {
+      "name": "TELANGANA",
+      "departure_pct": -18,
+      "category": "Normal"
+    }
+  ],
+  "history": [
+    {
+      "year": 2016,
+      "pct": 97
+    },
+    {
+      "year": 2017,
+      "pct": 95
+    },
+    {
+      "year": 2018,
+      "pct": 91
+    },
+    {
+      "year": 2019,
+      "pct": 110
+    },
+    {
+      "year": 2020,
+      "pct": 109
+    },
+    {
+      "year": 2021,
+      "pct": 99
+    },
+    {
+      "year": 2022,
+      "pct": 106
+    },
+    {
+      "year": 2023,
+      "pct": 94
+    },
+    {
+      "year": 2024,
+      "pct": 108
+    },
+    {
+      "year": 2025,
+      "pct": 108
+    }
+  ],
+  "sources": [
+    {
+      "name": "IMD Subdivision cumulative departure PDF, 01-06-2026 to 30-09-2026",
+      "url": "https://mausam.imd.gov.in/Rainfall/SUBDIVISION_RAINFALL_DEPARTURECUMULATIVE_COUNTRY_INDIA_c.pdf"
+    },
+    {
+      "name": "Business Standard, 2026 monsoon ends with nearly 13% deficit (citing IMD)",
+      "url": "https://www.business-standard.com/industry/agriculture/2026-monsoon-ends-with-nearly-13-rain-deficit-worst-since-2015-imd-126093001389_1.html"
+    },
+    {
+      "name": "ETV Bharat, Monsoon 2026 ends 13% below normal",
+      "url": "https://www.etvbharat.com/en/bharat/monsoon-2026-ends-13-percent-below-normal-fourth-lowest-since-2001-enn26093007819"
+    },
+    {
+      "name": "The Bridge Chronicle, fourth-lowest monsoon since 2001",
+      "url": "https://www.thebridgechronicle.com/news/nation/india-fourth-lowest-monsoon-rainfall-2026-october-forecast-agn97"
+    },
+    {
+      "name": "IMD 2016 End of Season Report (ReliefWeb)",
+      "url": "https://reliefweb.int/report/india/india-meteorological-department-2016-southwest-monsoon-end-season-report"
+    },
+    {
+      "name": "IMD/MAUSAM 2017 monsoon report",
+      "url": "https://mausamjournal.imd.gov.in/index.php/MAUSAM/article/download/348/267/1094"
+    },
+    {
+      "name": "ICRA Southwest Monsoon Outlook 2026 (2018 actual 91%)",
+      "url": "https://www.icra.in/Rating/DownloadResearchSpecialCommentReport?id=6883"
+    },
+    {
+      "name": "IMD 2019 End of Season Report",
+      "url": "https://mausam.imd.gov.in/shimla/mcdata/monsoon/images/2019/monsoon_report_2019.pdf"
+    },
+    {
+      "name": "IMD Salient Features of Monsoon 2020",
+      "url": "https://internal.imd.gov.in/press_release/20201001_pr_900.pdf"
+    },
+    {
+      "name": "IndianAgri monsoon rainfall table (2021-2025)",
+      "url": "https://indianagri.com/data/monsoon-rainfall"
+    },
+    {
+      "name": "IMD Monsoon Report 2025 (2025 = 108%)",
+      "url": "https://mausam.imd.gov.in/imd_latest/monsoon_report_2025_2.pdf"
+    }
+  ],
+  "notes": "Subdivision values are as read by WebFetch from the IMD PDF (36 rows, last date column 30-09-2026); tallies match IMD: 1 excess (Odisha), 18 normal, 17 deficient. The PDF labels Arunachal Pradesh (-44) 'Large Deficient' but its own legend defines Large Deficient as -60 to -99, so it is recorded here as Deficient per the legend. Region mm, June mm and LPA, August mm come from news reports citing IMD (ETV Bharat, Business Standard), not IMD primary. July and September mm and Aug LPA not found. History 2016-2020 from IMD reports; 2021-2025 from IndianAgri table except 2025 (IMD report) and 2022/2023/2024/2021 not checked against IMD primary documents. 2026 is described as fourth lowest since 2001 and 13th lowest since 1901 (news citing IMD). No IMD end of season press release or PIB release for 2026 was fetched directly."
+}

@@ -48,7 +48,7 @@ export default function DashboardPage({ params }: Props) {
                 {section.label}
               </Link>
             )}
-            <span className="font-plex text-xs text-muted">Updated {d.cadence.toLowerCase()}</span>
+            <span className="font-plex text-xs text-muted">Refreshed: {d.cadence}</span>
           </div>
           <h1 className="font-playfair text-3xl lg:text-[40px] font-bold text-navy leading-tight mb-3">{d.title}</h1>
           <p className="font-plex text-lg text-muted leading-relaxed max-w-3xl">{d.excerpt}</p>
@@ -60,7 +60,7 @@ export default function DashboardPage({ params }: Props) {
         <ShareButtons title={d.title} url={`https://www.sankhyaiq.in/dashboards/${d.slug}`} />
         <DataSources sources={d.sources} />
         <p className="mt-8 font-plex text-xs text-muted leading-relaxed">
-          Figures were last checked against the sources above on {formatDate(d.updated)}. Refresh cycle: {d.cadence.toLowerCase()}.
+          Figures were last checked against the sources above on {formatDate(d.updated)}. Refresh cycle: {d.cadence}.
         </p>
       </main>
 

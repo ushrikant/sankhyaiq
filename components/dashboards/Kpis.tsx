@@ -10,7 +10,7 @@ const TONE = { good: "#2e7d32", bad: "#b3261e", flat: "#546e7a" } as const;
 
 // Headline numbers across the top of every dashboard.
 export default function Kpis({ items, accent = "#1565c0" }: { items: Kpi[]; accent?: string }) {
-  const cols = items.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3";
+  const cols = items.length >= 5 ? "lg:grid-cols-5" : items.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3";
   return (
     <div className={`grid grid-cols-2 ${cols} gap-3 mb-8`}>
       {items.map((k) => (

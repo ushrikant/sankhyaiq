@@ -1,0 +1,822 @@
+{
+ "launches": [
+  {
+   "date": "1979-08-10",
+   "vehicle": "SLV",
+   "mission": "SLV-3 E1 / Rohini Technology Payload",
+   "outcome": "failure",
+   "note": "Faulty valve; crashed in Bay of Bengal"
+  },
+  {
+   "date": "1980-07-18",
+   "vehicle": "SLV",
+   "mission": "SLV-3 E2 / Rohini RS-1",
+   "outcome": "success",
+   "note": "First Indian-launched satellite"
+  },
+  {
+   "date": "1981-05-31",
+   "vehicle": "SLV",
+   "mission": "SLV-3 D1 / Rohini RS-D1",
+   "outcome": "partial",
+   "note": "Orbit too low; decayed after about nine days"
+  },
+  {
+   "date": "1983-04-17",
+   "vehicle": "SLV",
+   "mission": "SLV-3 D2 / Rohini RS-D2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "1987-03-24",
+   "vehicle": "ASLV",
+   "mission": "ASLV-D1 / SROSS-A",
+   "outcome": "failure",
+   "note": "First stage failed to ignite"
+  },
+  {
+   "date": "1988-07-13",
+   "vehicle": "ASLV",
+   "mission": "ASLV-D2 / SROSS-B",
+   "outcome": "failure",
+   "note": "Control problems; vehicle disintegrated"
+  },
+  {
+   "date": "1992-05-20",
+   "vehicle": "ASLV",
+   "mission": "ASLV-D3 / SROSS-C",
+   "outcome": "partial",
+   "note": "Lower than planned orbit; decayed quickly"
+  },
+  {
+   "date": "1993-09-20",
+   "vehicle": "PSLV",
+   "mission": "PSLV-D1 / IRS-1E",
+   "outcome": "failure",
+   "note": "Wikipedia date 1993-09-20"
+  },
+  {
+   "date": "1994-05-05",
+   "vehicle": "ASLV",
+   "mission": "ASLV-D4 / SROSS-C2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "1994-10-15",
+   "vehicle": "PSLV",
+   "mission": "PSLV-D2 / IRS-P2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "1996-03-21",
+   "vehicle": "PSLV",
+   "mission": "PSLV-D3 / IRS-P3",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "1997-09-29",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C1 / IRS-1D",
+   "outcome": "partial",
+   "note": "Wikipedia: partial failure (IRS-1D placed in lower than planned orbit)"
+  },
+  {
+   "date": "1999-05-26",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C2 / Oceansat-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2001-04-18",
+   "vehicle": "GSLV",
+   "mission": "GSLV-D1 / GSAT-1",
+   "outcome": "partial",
+   "note": ""
+  },
+  {
+   "date": "2001-10-22",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C3 / TES",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2002-09-12",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C4 / MetSat-1 (Kalpana-1)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2003-05-08",
+   "vehicle": "GSLV",
+   "mission": "GSLV-D2 / GSAT-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2003-10-17",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C5 / Resourcesat-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2004-09-20",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F01 / EDUSAT (GSAT-3)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2005-05-05",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C6 / Cartosat-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2006-07-10",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F02 / INSAT-4C",
+   "outcome": "failure",
+   "note": ""
+  },
+  {
+   "date": "2007-01-10",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C7 / Cartosat-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2007-04-23",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C8 / AGILE",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2007-09-02",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F04 / INSAT-4CR",
+   "outcome": "partial",
+   "note": ""
+  },
+  {
+   "date": "2008-01-21",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C10 / TecSAR",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2008-04-28",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C9 / Cartosat-2A",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2008-10-22",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C11 / Chandrayaan-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2009-04-20",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C12 / RISAT-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2009-09-23",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C14 / Oceansat-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2010-04-15",
+   "vehicle": "GSLV",
+   "mission": "GSLV-D3 / GSAT-4",
+   "outcome": "failure",
+   "note": ""
+  },
+  {
+   "date": "2010-07-12",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C15 / Cartosat-2B",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2010-12-25",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F06 / GSAT-5P",
+   "outcome": "failure",
+   "note": ""
+  },
+  {
+   "date": "2011-04-20",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C16 / Resourcesat-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2011-07-15",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C17 / GSAT-12",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2011-10-12",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C18 / Megha-Tropiques",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2012-04-26",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C19 / RISAT-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2012-09-09",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C21 / SPOT-6",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2013-02-25",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C20 / SARAL",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2013-07-01",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C22 / IRNSS-1A",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2013-11-05",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C25 / Mars Orbiter Mission (Mangalyaan)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2014-01-05",
+   "vehicle": "GSLV",
+   "mission": "GSLV-D5 / GSAT-14",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2014-04-04",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C24 / IRNSS-1B",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2014-06-30",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C23 / SPOT-7",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2014-10-16",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C26 / IRNSS-1C",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2015-03-28",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C27 / IRNSS-1D",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2015-07-10",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C28 / UK-DMC3A",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2015-08-27",
+   "vehicle": "GSLV",
+   "mission": "GSLV-D6 / GSAT-6",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2015-09-28",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C30 / Astrosat",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2015-12-16",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C29 / TeLEOS-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2016-01-20",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C31 / IRNSS-1E",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2016-03-10",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C32 / IRNSS-1F",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2016-04-28",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C33 / IRNSS-1G",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2016-06-22",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C34 / Cartosat-2C",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2016-09-08",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F05 / INSAT-3DR",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2016-09-26",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C35 / ScatSat-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2016-12-07",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C36 / Resourcesat-2A",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2017-02-15",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C37 / Cartosat-2D",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2017-05-05",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F09 / GSAT-9 (South Asia Satellite)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2017-06-05",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-D1 / GSAT-19",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2017-06-23",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C38 / Cartosat-2E",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2017-08-31",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C39 / IRNSS-1H",
+   "outcome": "failure",
+   "note": "Heat shield failed to separate"
+  },
+  {
+   "date": "2018-01-12",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C40 / Cartosat-2F",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2018-03-29",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F08 / GSAT-6A",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2018-04-11",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C41 / IRNSS-1I",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2018-09-16",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C42 / NovaSAR-S",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2018-11-14",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-D2 / GSAT-29",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2018-11-29",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C43 / HySIS",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2018-12-19",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F11 / GSAT-7A",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2019-01-24",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C44 / Microsat-R",
+   "outcome": "success",
+   "note": "UNCERTAIN: Wikipedia fetch showed 2019-01-25; 2019-01-24 used (lift-off late evening 24 Jan IST, also 24 Jan UTC); verify"
+  },
+  {
+   "date": "2019-04-01",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C45 / EMISAT",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2019-05-22",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C46 / RISAT-2B",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2019-07-22",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-M1 / Chandrayaan-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2019-11-27",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C47 / Cartosat-3",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2019-12-11",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C48 / RISAT-2BR1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2020-11-07",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C49 / EOS-01",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2020-12-17",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C50 / GSAT-12R (CMS-01)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2021-02-28",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C51 / Amazonia-1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2021-08-12",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F10 / EOS-03 (GISAT-1)",
+   "outcome": "failure",
+   "note": ""
+  },
+  {
+   "date": "2022-02-14",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C52 / EOS-04",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2022-06-30",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C53 / DS-EO",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2022-08-07",
+   "vehicle": "SSLV",
+   "mission": "SSLV-D1 / EOS-02 and AzaadiSAT",
+   "outcome": "failure",
+   "note": "Wrong elliptical orbit (about 361x76 km); satellites reentered"
+  },
+  {
+   "date": "2022-10-22",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-M2 / 36 OneWeb Gen-1 satellites (OneWeb India-1)",
+   "outcome": "success",
+   "note": "18:37 UTC 22 Oct; 23 Oct in IST (ISRO lists 23 Oct)"
+  },
+  {
+   "date": "2022-11-26",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C54 / Oceansat-3 (EOS-06)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2023-02-10",
+   "vehicle": "SSLV",
+   "mission": "SSLV-D2 / EOS-07, Janus-1, AzaadiSAT-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2023-03-26",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-M3 / 36 OneWeb Gen-1 satellites (OneWeb India-2)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2023-04-22",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C55 / TeLEOS-2",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2023-05-29",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F12 / NVS-01",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2023-07-14",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-M4 / Chandrayaan-3",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2023-07-30",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C56 / DS-SAR",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2023-09-02",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C57 / Aditya-L1",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2024-01-01",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C58 / XPoSat",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2024-02-17",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F14 / INSAT-3DS",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2024-08-16",
+   "vehicle": "SSLV",
+   "mission": "SSLV-D3 / EOS-08",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2024-12-05",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C59 / PROBA-3",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2024-12-30",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C60 / SPADEX",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2025-01-29",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F15 / NVS-02 (IRNSS-1K)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2025-05-18",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C61 / EOS-09 (RISAT-1B)",
+   "outcome": "failure",
+   "note": "Third stage chamber pressure drop"
+  },
+  {
+   "date": "2025-07-30",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F16 / NISAR (NASA-ISRO)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2025-11-02",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-M5 / CMS-03 (GSAT-7R)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2025-12-24",
+   "vehicle": "GSLV Mk III/LVM3",
+   "mission": "LVM3-M6 / BlueBird Block 2 FM1 (BlueBird-6, AST SpaceMobile)",
+   "outcome": "success",
+   "note": ""
+  },
+  {
+   "date": "2026-01-12",
+   "vehicle": "PSLV",
+   "mission": "PSLV-C62 / EOS-N1",
+   "outcome": "failure",
+   "note": "Third stage roll-rate anomaly; cause not publicly disclosed; Failure Analysis Committee report 2026-06-13 per Wikipedia. Date 2026-01-12 UTC-day per Wikipedia"
+  },
+  {
+   "date": "2026-09-03",
+   "vehicle": "GSLV",
+   "mission": "GSLV-F17 / EOS-05 (GISAT-1A)",
+   "outcome": "success",
+   "note": "Launched 2026-09-04 02:55 IST = 2026-09-03 UTC; sub-GTO"
+  }
+ ],
+ "sources": [
+  {
+   "name": "Wikipedia: List of PSLV launches",
+   "url": "https://en.wikipedia.org/wiki/List_of_PSLV_launches"
+  },
+  {
+   "name": "Wikipedia: List of GSLV launches",
+   "url": "https://en.wikipedia.org/wiki/List_of_GSLV_launches"
+  },
+  {
+   "name": "Wikipedia: List of LVM3 launches",
+   "url": "https://en.wikipedia.org/wiki/List_of_LVM3_launches"
+  },
+  {
+   "name": "ISRO: LVM3 Launchers",
+   "url": "https://www.isro.gov.in/LVM3_Launchers.html"
+  },
+  {
+   "name": "Wikipedia: SSLV",
+   "url": "https://en.wikipedia.org/wiki/SSLV"
+  },
+  {
+   "name": "Wikipedia: Satellite Launch Vehicle",
+   "url": "https://en.wikipedia.org/wiki/Satellite_Launch_Vehicle"
+  },
+  {
+   "name": "Wikipedia: Augmented Satellite Launch Vehicle",
+   "url": "https://en.wikipedia.org/wiki/Augmented_Satellite_Launch_Vehicle"
+  },
+  {
+   "name": "Wikipedia: PSLV-C61",
+   "url": "https://en.wikipedia.org/wiki/PSLV-C61"
+  },
+  {
+   "name": "Wikipedia: PSLV-C62",
+   "url": "https://en.wikipedia.org/wiki/PSLV-C62"
+  },
+  {
+   "name": "Wikipedia: LVM3-M6",
+   "url": "https://en.wikipedia.org/wiki/LVM3-M6"
+  },
+  {
+   "name": "Wikipedia: 2026 in spaceflight",
+   "url": "https://en.wikipedia.org/wiki/2026_in_spaceflight"
+  },
+  {
+   "name": "Wikipedia: Gaganyaan-1",
+   "url": "https://en.wikipedia.org/wiki/Gaganyaan-1"
+  },
+  {
+   "name": "Vajiram and Ravi: ISRO EOS-05 launch 2026",
+   "url": "https://vajiramandravi.com/current-affairs/isro-eos-05-launch-2026/"
+  },
+  {
+   "name": "The Space Review: PSLV-C62 failure",
+   "url": "https://www.thespacereview.com/article/5140/1"
+  }
+ ],
+ "notes": "Dates are UTC as given by Wikipedia; IST date can differ by one day (LVM3-M2, GSLV-F17); PSLV-C44 date is uncertain by one day. Excluded: LVM3 CARE 2014-12-18 (suborbital test). Gaganyaan G1 not flown as of 2026-10-05 (planned Q4 2026 per Wikipedia, HLVM3; Tribune headline suggests slip to Q1 2027, unverified). No other 2026 launches found: PSLV-C62 (Jan, failure) and GSLV-F17 (Sep, success). PSLV return to flight was targeted late June 2026 but no launch confirmed. Rows from most sources rely on Wikipedia list pages via WebFetch summaries; isro.gov.in only cross-checked LVM3 page (it lists M5/M6 as Scheduled, stale). Cross-check: LVM3-M6 Wikipedia says it was ISRO's 100th orbital launch; this list gives it position 100. One 2026 source (2026 in spaceflight summary) labelled EOS-05 as PSLV; GSLV-F17 per GSLV list, Vajiram and Ravi and Wikipedia EOS-05 is used. GSLV D1 to F04 etc outcome labels follow Wikipedia (partial failure mapped to partial). Gaps: no per-launch cross-check against isro.gov.in for PSLV/GSLV/SLV/ASLV; secondary payloads not listed.",
+ "counts": {
+  "total": 102,
+  "by_vehicle": {
+   "SLV": 4,
+   "ASLV": 4,
+   "PSLV": 64,
+   "GSLV": 19,
+   "GSLV Mk III/LVM3": 8,
+   "SSLV": 3
+  },
+  "by_outcome": {
+   "failure": 12,
+   "success": 85,
+   "partial": 5
+  },
+  "by_vehicle_and_outcome": {
+   "SLV": {
+    "failure": 1,
+    "success": 2,
+    "partial": 1
+   },
+   "ASLV": {
+    "failure": 2,
+    "partial": 1,
+    "success": 1
+   },
+   "PSLV": {
+    "failure": 4,
+    "success": 59,
+    "partial": 1
+   },
+   "GSLV": {
+    "partial": 2,
+    "success": 13,
+    "failure": 4
+   },
+   "GSLV Mk III/LVM3": {
+    "success": 8
+   },
+   "SSLV": {
+    "failure": 1,
+    "success": 2
+   }
+  }
+ }
+}

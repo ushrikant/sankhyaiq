@@ -1,0 +1,37 @@
+{
+  "species": [
+    { "name": "Asian elephant", "count": 22446, "year": "2025", "body": "Not stated", "note": "Range 18,255 to 26,645. Released October 2025." },
+    { "name": "Leopard", "count": 13874, "year": "2022", "body": "NTCA and WII", "note": "" },
+    { "name": "Indian wild ass", "count": 7672, "year": "2024", "body": "Not stated", "note": "6,082 in 2020." },
+    { "name": "River dolphins", "count": 6327, "year": "Not stated", "body": "Not stated", "note": "Gangetic and Indus river dolphins together." },
+    { "name": "Tiger", "count": 3682, "year": "2022", "body": "NTCA", "note": "Census figure." },
+    { "name": "One horned rhino", "count": 3260, "year": "2025", "body": "Not stated", "note": "Assam only. Global population about 4,075. Kaziranga holds over 2,600." },
+    { "name": "Asiatic lion", "count": 891, "year": "2025", "body": "Gujarat Forest Department", "note": "Gujarat only." },
+    { "name": "Snow leopard", "count": 718, "year": "Not stated", "body": "Not stated", "note": "" },
+    { "name": "Great Indian Bustard", "count": 130, "year": "2026", "body": "WII", "note": "Plus or minus 21." },
+    { "name": "Cheetah", "count": 56, "year": "September 2026", "body": "Not stated", "note": "36 of them were born in India." }
+  ],
+  "elephants": {
+    "total": 22446,
+    "low": 18255,
+    "high": 26645,
+    "earlier": { "year": 2017, "count": 27312 },
+    "released": "October 2025",
+    "states": [
+      { "state": "Karnataka", "count": 6013 },
+      { "state": "Assam", "count": 4159 },
+      { "state": "Tamil Nadu", "count": 3136 },
+      { "state": "Kerala", "count": 2785 },
+      { "state": "Uttarakhand", "count": 1792 }
+    ]
+  },
+  "wildAss": [
+    { "year": 1976, "count": 720 },
+    { "year": 1983, "count": 1989 },
+    { "year": 1990, "count": 2072 },
+    { "year": 1999, "count": 2839 },
+    { "year": 2014, "count": 4451 },
+    { "year": 2020, "count": 6082 },
+    { "year": 2024, "count": 7672 }
+  ]
+}

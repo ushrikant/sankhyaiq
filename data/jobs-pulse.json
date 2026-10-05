@@ -1,0 +1,260 @@
+{
+ "months": [
+  {
+   "m": "2025-04",
+   "ur": 5.1,
+   "ur_rural": 4.5,
+   "ur_urban": 6.5,
+   "ur_male": 5.2,
+   "ur_female": 5.0,
+   "lfpr": 55.6,
+   "lfpr_rural": 58.0,
+   "lfpr_urban": 50.7,
+   "lfpr_female": 34.2,
+   "wpr": 52.8
+  },
+  {
+   "m": "2025-05",
+   "ur": 5.6,
+   "ur_rural": 5.1,
+   "ur_urban": 6.9,
+   "ur_male": 5.6,
+   "ur_female": 5.8,
+   "lfpr": 54.8,
+   "lfpr_rural": 56.9,
+   "lfpr_urban": 50.4,
+   "lfpr_female": 33.2,
+   "wpr": 51.7
+  },
+  {
+   "m": "2025-06",
+   "ur": 5.6,
+   "ur_rural": 4.9,
+   "ur_urban": 7.1,
+   "ur_male": 5.6,
+   "ur_female": 5.6,
+   "lfpr": 54.2,
+   "lfpr_rural": 56.1,
+   "lfpr_urban": 50.4,
+   "lfpr_female": 32.0,
+   "wpr": 51.2
+  },
+  {
+   "m": "2025-07",
+   "ur": 5.2,
+   "ur_rural": 4.4,
+   "ur_urban": 7.2,
+   "ur_male": 5.3,
+   "ur_female": 5.1,
+   "lfpr": 54.9,
+   "lfpr_rural": 56.9,
+   "lfpr_urban": 50.7,
+   "lfpr_female": 33.3,
+   "wpr": 52.0
+  },
+  {
+   "m": "2025-08",
+   "ur": 5.1,
+   "ur_rural": 4.3,
+   "ur_urban": 6.7,
+   "ur_male": 5.0,
+   "ur_female": 5.2,
+   "lfpr": 55.0,
+   "lfpr_rural": 57.0,
+   "lfpr_urban": 50.9,
+   "lfpr_female": 33.7,
+   "wpr": 52.2
+  },
+  {
+   "m": "2025-09",
+   "ur": 5.2,
+   "ur_rural": 4.6,
+   "ur_urban": 6.8,
+   "ur_male": 5.1,
+   "ur_female": 5.5,
+   "lfpr": 55.3,
+   "lfpr_rural": 57.4,
+   "lfpr_urban": 50.9,
+   "lfpr_female": 34.1,
+   "wpr": 52.4
+  },
+  {
+   "m": "2025-10",
+   "ur": 5.2,
+   "ur_rural": 4.4,
+   "ur_urban": 7.0,
+   "ur_male": 5.1,
+   "ur_female": 5.4,
+   "lfpr": 55.4,
+   "lfpr_rural": 57.8,
+   "lfpr_urban": 50.5,
+   "lfpr_female": 34.2,
+   "wpr": 52.5
+  },
+  {
+   "m": "2025-11",
+   "ur": 4.7,
+   "ur_rural": 3.9,
+   "ur_urban": 6.5,
+   "ur_male": 4.6,
+   "ur_female": 4.8,
+   "lfpr": 55.8,
+   "lfpr_rural": 58.6,
+   "lfpr_urban": 50.4,
+   "lfpr_female": 35.1,
+   "wpr": 53.2
+  },
+  {
+   "m": "2025-12",
+   "ur": 4.8,
+   "ur_rural": 3.9,
+   "ur_urban": 6.7,
+   "ur_male": 4.7,
+   "ur_female": 4.9,
+   "lfpr": 56.1,
+   "lfpr_rural": 59.0,
+   "lfpr_urban": 50.2,
+   "lfpr_female": 35.3,
+   "wpr": 53.4
+  },
+  {
+   "m": "2026-01",
+   "ur": 5.0,
+   "ur_rural": 4.2,
+   "ur_urban": 7.0,
+   "ur_male": 4.8,
+   "ur_female": 5.6,
+   "lfpr": 55.9,
+   "lfpr_rural": 58.7,
+   "lfpr_urban": 50.3,
+   "lfpr_female": 35.1,
+   "wpr": 53.1
+  },
+  {
+   "m": "2026-02",
+   "ur": 4.9,
+   "ur_rural": 4.2,
+   "ur_urban": 6.6,
+   "ur_male": 4.8,
+   "ur_female": 5.1,
+   "lfpr": 55.9,
+   "lfpr_rural": 58.7,
+   "lfpr_urban": 50.4,
+   "lfpr_female": 35.3,
+   "wpr": 53.2
+  },
+  {
+   "m": "2026-03",
+   "ur": 5.1,
+   "ur_rural": 4.3,
+   "ur_urban": 6.8,
+   "ur_male": 5.0,
+   "ur_female": 5.3,
+   "lfpr": 55.4,
+   "lfpr_rural": 58.0,
+   "lfpr_urban": 50.3,
+   "lfpr_female": 34.4,
+   "wpr": 52.6
+  },
+  {
+   "m": "2026-04",
+   "ur": 5.2,
+   "ur_rural": 4.6,
+   "ur_urban": 6.6,
+   "ur_male": 5.1,
+   "ur_female": 5.4,
+   "lfpr": 55.0,
+   "lfpr_rural": 57.5,
+   "lfpr_urban": 50.1,
+   "lfpr_female": 33.9,
+   "wpr": 52.2
+  },
+  {
+   "m": "2026-05",
+   "ur": 5.5,
+   "ur_rural": 5.1,
+   "ur_urban": 6.4,
+   "ur_male": 5.4,
+   "ur_female": 5.6,
+   "lfpr": 54.4,
+   "lfpr_rural": 56.6,
+   "lfpr_urban": 49.8,
+   "lfpr_female": 32.8,
+   "wpr": 51.4
+  },
+  {
+   "m": "2026-06",
+   "ur": 5.5,
+   "ur_rural": 5.0,
+   "ur_urban": 6.6,
+   "ur_male": 5.3,
+   "ur_female": 5.9,
+   "lfpr": 54.4,
+   "lfpr_rural": 56.6,
+   "lfpr_urban": 50.1,
+   "lfpr_female": 32.7,
+   "wpr": 51.4
+  },
+  {
+   "m": "2026-07",
+   "ur": 5.1,
+   "ur_rural": 4.5,
+   "ur_urban": 6.7,
+   "ur_male": 5.0,
+   "ur_female": 5.4,
+   "lfpr": 55.4,
+   "lfpr_rural": 58.0,
+   "lfpr_urban": 50.4,
+   "lfpr_female": 34.4,
+   "wpr": 52.5
+  },
+  {
+   "m": "2026-08",
+   "ur": 5.0,
+   "ur_rural": 4.1,
+   "ur_urban": 6.8,
+   "ur_male": 4.9,
+   "ur_female": 5.1,
+   "lfpr": 55.6,
+   "lfpr_rural": 58.2,
+   "lfpr_urban": 50.4,
+   "lfpr_female": 34.8,
+   "wpr": 52.8
+  }
+ ],
+ "sources": [
+  {
+   "name": "PIB: PLFS Monthly Bulletin April 2025 press note",
+   "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/apr/doc202549537201.pdf"
+  },
+  {
+   "name": "PIB: PLFS press note covering Apr-Jun 2025 (monthly, 15+ CWS tables)",
+   "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jul/doc2025715587001.pdf"
+  },
+  {
+   "name": "PIB: PLFS Quarterly Bulletin Apr-Jun 2025 and Monthly Bulletin July 2025",
+   "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2157501"
+  },
+  {
+   "name": "MoSPI: Press Note PLFS Monthly Bulletin July 2026 (Jul-25 to Jul-26 series, latest revised)",
+   "url": "https://www.mospi.gov.in/uploads/latestReleases/latest_release_1786961114962_47b9343c-f726-4581-8440-c2f119a86ab6_Monthly_Press_note_July_2026.pdf"
+  },
+  {
+   "name": "PIB: PLFS Monthly Bulletin June 2026 press note (cross-check of Jun-25 and Jun-26)",
+   "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/jul/doc2026715921501.pdf"
+  },
+  {
+   "name": "DD India (secondary, reports PIB/MoSPI Aug 2026 release): Aug 2026 figures",
+   "url": "https://ddindia.co.in/2026/09/indias-overall-labour-force-participation-rate-rises-to-55-6-in-august-plfs/"
+  },
+  {
+   "name": "Upstox (secondary): Aug 2026 cross-check of UR, LFPR, WPR",
+   "url": "https://upstox.com/news/business-news/economy/india-s-unemployment-rate-eases-to-5-in-august-on-stronger-rural-employment/article-200294/"
+  },
+  {
+   "name": "PIB Aug 2026 press note page (PRID 2310427): exists, but fetch returned only the headline, no tables",
+   "url": "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2310427&reg=3&lang=1"
+  }
+ ],
+ "notes": "Persons aged 15+, current weekly status (CWS), percent. Apr-Jun 2025 are from the 2025 press notes (as first published; later notes do not restate them). Jul 2025 to Jul 2026 are from the July 2026 MoSPI press note (latest revised series); Jun-25 cross-checked against the June 2026 note. AUGUST 2026 IS SECONDARY ONLY: the PIB Aug 2026 press note page was found but the fetch returned no table content, and the mospi.gov.in PDF was not located. Aug-26 values come from DD India (Prasar Bharati) and Upstox reproducing the release: UR 5.0, rural 4.1, urban 6.8, LFPR 55.6, rural 58.2, urban 50.4, female LFPR 34.8, WPR 52.8. Aug-26 male UR 4.9 and female UR 5.1 appear in DD India only (single source). Aug 2026 release did not restate earlier months in anything fetched, so Jul-26 and prior are as per the July 2026 note and may have been revised in the Aug note. September 2026 not yet released (expected about 15 Oct 2026). Male UR for Aug-25 to Jul-26 is the overall male column of the July 2026 note (Aug-25 5.0 matches a Tribune report of the Aug 2025 release). Apr-25 rural LFPR is 58.0 per two PIB documents (one extraction read 57.7). Cross-checks passed: Jul-26 UR 5.1, LFPR 55.4, female LFPR 34.4, WPR 52.5."
+}
