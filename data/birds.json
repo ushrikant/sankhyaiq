@@ -1,0 +1,35 @@
+{
+  "edition": "SoIB 2023",
+  "speciesAssessed": 942,
+  "newerEditionNote": "A 2025 interim update (V2, published 6 May 2026 on Zenodo) exists and also covers 942 species. Its category counts could not be read from any fetched page, so the figures below are the SoIB 2023 counts.",
+  "longTerm": { "assessed": 338, "categories": [
+    { "label": "Declined", "count": 204 },
+    { "label": "Stable", "count": 98 },
+    { "label": "Increased", "count": 36 } ] },
+  "current": { "assessed": 359, "categories": [
+    { "label": "Declined", "count": 142 },
+    { "label": "Stable", "count": 189 },
+    { "label": "Increased", "count": 28 } ] },
+  "priority": { "assessed": 942, "categories": [
+    { "label": "High", "count": 178 },
+    { "label": "Moderate", "count": 323 },
+    { "label": "Low", "count": 441 } ] },
+  "groupDeclines": [
+    { "group": "Grassland specialists", "decline": "More than 50%" },
+    { "group": "Long distance migratory birds", "decline": "More than 50%" },
+    { "group": "Shorebirds breeding in the Arctic", "decline": "Close to 80%" }
+  ],
+  "provenance": {
+    "retrieved": "2026-10-06",
+    "counts": "Category counts read from Factly (factly.in review of SoIB 2023) and cross checked against IAS Score for priority counts, long term decline (204 of 338) and current decline (142 of 359). Each set sums to its stated total.",
+    "groupDeclines": "Read from Factly only. Percentages are stated loosely, so they are shown as text and not charted.",
+    "notRead": "stateofindiasbirds.in sub pages returned 403. The home page gave 942 species and 30 million observations only. The interpreting results page gave 531 species assessed for long term trend and 652 for current trend in the 2025 update.",
+    "sources": [
+      "https://stateofindiasbirds.in",
+      "https://stateofindiasbirds.in/interpreting-soib-results/",
+      "https://zenodo.org/records/20036633",
+      "https://factly.in/review-state-of-indias-birds-2023-report-highlights-species-requiring-immediate-attention-for-conservation/",
+      "https://iasscore.in/current-affairs/state-of-indias-birds-report-2023"
+    ]
+  }
+}

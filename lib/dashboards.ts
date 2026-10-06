@@ -138,6 +138,53 @@ export const dashboards: Dashboard[] = [
       { name: "Vahan dashboard, Ministry of Road Transport and Highways", url: "https://vahan.parivahan.gov.in/vahan4dashboard/", description: "Registrations by fuel type (ELECTRIC(BOV) and PURE EV) and vehicle category" },
     ],
   },
+  {
+    slug: "india-birds",
+    section: "animals-and-nature",
+    title: "State of India's birds",
+    excerpt: "Six in ten assessed bird species have declined over the long term. 178 of 942 species are of high conservation priority. Figures are from SoIB 2023.",
+    kicker: "178 of 942 species high priority",
+    updated: "2026-10-06",
+    cadence: "Each report",
+    sources: [
+      { name: "State of India's Birds", url: "https://stateofindiasbirds.in", description: "Official report site" },
+      { name: "SoIB interpreting results", url: "https://stateofindiasbirds.in/interpreting-soib-results/", description: "How trend categories are defined" },
+      { name: "SoIB 2025 update on Zenodo", url: "https://zenodo.org/records/20036633", description: "Newer interim update. Counts by category were not readable, so the charts use SoIB 2023." },
+      { name: "Factly, review of SoIB 2023", url: "https://factly.in/review-state-of-indias-birds-2023-report-highlights-species-requiring-immediate-attention-for-conservation/", description: "Secondary source for category counts" },
+      { name: "IAS Score, summary of SoIB 2023", url: "https://iasscore.in/current-affairs/state-of-indias-birds-report-2023", description: "Secondary source used to cross-check counts" },
+    ],
+  },
+  {
+    slug: "repo-rate",
+    section: "money-and-economy",
+    title: "Repo rate and the RBI",
+    excerpt: "The repo rate is 5.25%, unchanged since the December 2025 cut. The 7 October 2026 decision is not out yet.",
+    kicker: "5.25% repo rate",
+    updated: "2026-10-06",
+    cadence: "After each MPC meeting",
+    sources: [
+      { name: "BankBazaar, repo rate history", url: "https://www.bankbazaar.com/home-loan/repo-rate.html", description: "Secondary source for rate change dates" },
+      { name: "Bricksnwall, repo rate timeline", url: "https://www.bricksnwall.com/news-details/all-you-need-to-know-about-rbi-repo-rate-changes-timeline", description: "Secondary source used to cross-check dates" },
+      { name: "indiainflation.com, repo rate", url: "https://indiainflation.com/rbi/repo-rate", description: "Secondary source used to cross-check the current rate" },
+      { name: "Outlook Money, RBI MPC October 2026", url: "https://www.outlookmoney.com/amp/story/banking/rbi-mpc-october-2026-key-things-to-know-ahead-of-policy-decision", description: "Meeting dates and economist forecasts" },
+      { name: "Business Standard, RBI MPC October 2026", url: "https://www.business-standard.com/amp/finance/news/rbi-mpc-october-2026-meeting-when-and-where-to-watch-rate-decision-live-126100600090_1.html", description: "Announcement timing" },
+    ],
+  },
+  {
+    slug: "digital-public-infrastructure",
+    section: "ai-and-technology",
+    title: "Digital public infrastructure",
+    excerpt: "UPI handled 24.07 billion transactions worth ₹29.37 lakh crore in September 2026, up 22.6% in volume on a year earlier. FASTag runs near 350 million a month.",
+    kicker: "24.07 billion UPI payments",
+    updated: "2026-10-06",
+    cadence: "Monthly",
+    sources: [
+      { name: "MediaNama, UPI in September 2026", url: "https://www.medianama.com/2026/10/223-upi-september-transactions-decline/", description: "Reporting on NPCI data" },
+      { name: "Business Standard, UPI August 2026 with FASTag", url: "https://www.business-standard.com/finance/news/upi-transactions-august-2026-record-volume-npci-126090100506_1.html", description: "Reporting on NPCI data" },
+      { name: "Dataful, NETC FASTag monthly", url: "https://dataful.in/datasets/337/", description: "NPCI data republished" },
+      { name: "Dataful, UPI monthly", url: "https://dataful.in/datasets/22480/", description: "NPCI data republished" },
+    ],
+  },
 ];
 
 export const getDashboard = (slug: string) => dashboards.find((d) => d.slug === slug);

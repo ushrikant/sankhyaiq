@@ -1,0 +1,257 @@
+{
+ "updated": "2026-10-06",
+ "startRate": {
+  "date": "2014-01-28",
+  "rate": 8.0,
+  "note": "Rate in force before the first change in this series."
+ },
+ "current": {
+  "rate": 5.25,
+  "since": "2025-12-05",
+  "stance": "Neutral",
+  "stanceAsOf": "2026-08-05"
+ },
+ "nextDecision": {
+  "date": "2026-10-07",
+  "announced": false,
+  "note": "As of 6 October 2026 the 7 October decision has not been announced. Meeting runs 5 to 7 October, announcement due 10:00 am IST. No outcome is recorded here.",
+  "expectations": "Reuters poll of 61 economists: 35 expected a 25 bps hike to 5.50% (Outlook Money). Eight of ten economists surveyed expected a 25 bps hike (Business Standard). These are forecasts, not decisions."
+ },
+ "crossCheck": "5.25% held in August 2026: confirmed by Outlook Money, indiainflation.com and bricksnwall.com.",
+ "changes": [
+  {
+   "date": "2015-01-15",
+   "rate": 7.75,
+   "bps": -25
+  },
+  {
+   "date": "2015-03-04",
+   "rate": 7.5,
+   "bps": -25
+  },
+  {
+   "date": "2015-06-02",
+   "rate": 7.25,
+   "bps": -25
+  },
+  {
+   "date": "2015-09-29",
+   "rate": 6.75,
+   "bps": -50
+  },
+  {
+   "date": "2016-04-05",
+   "rate": 6.5,
+   "bps": -25
+  },
+  {
+   "date": "2016-10-04",
+   "rate": 6.25,
+   "bps": -25
+  },
+  {
+   "date": "2017-08-02",
+   "rate": 6.0,
+   "bps": -25
+  },
+  {
+   "date": "2018-06-06",
+   "rate": 6.25,
+   "bps": 25
+  },
+  {
+   "date": "2018-08-01",
+   "rate": 6.5,
+   "bps": 25
+  },
+  {
+   "date": "2019-02-07",
+   "rate": 6.25,
+   "bps": -25
+  },
+  {
+   "date": "2019-04-04",
+   "rate": 6.0,
+   "bps": -25
+  },
+  {
+   "date": "2019-06-06",
+   "rate": 5.75,
+   "bps": -25
+  },
+  {
+   "date": "2019-08-07",
+   "rate": 5.4,
+   "bps": -35
+  },
+  {
+   "date": "2019-10-04",
+   "rate": 5.15,
+   "bps": -25
+  },
+  {
+   "date": "2020-03-27",
+   "rate": 4.4,
+   "bps": -75
+  },
+  {
+   "date": "2020-05-22",
+   "rate": 4.0,
+   "bps": -40
+  },
+  {
+   "date": "2022-05-04",
+   "rate": 4.4,
+   "bps": 40
+  },
+  {
+   "date": "2022-06-08",
+   "rate": 4.9,
+   "bps": 50
+  },
+  {
+   "date": "2022-08-05",
+   "rate": 5.4,
+   "bps": 50
+  },
+  {
+   "date": "2022-09-30",
+   "rate": 5.9,
+   "bps": 50
+  },
+  {
+   "date": "2022-12-07",
+   "rate": 6.25,
+   "bps": 35
+  },
+  {
+   "date": "2023-02-08",
+   "rate": 6.5,
+   "bps": 25
+  },
+  {
+   "date": "2025-02-07",
+   "rate": 6.25,
+   "bps": -25
+  },
+  {
+   "date": "2025-04-09",
+   "rate": 6.0,
+   "bps": -25
+  },
+  {
+   "date": "2025-06-06",
+   "rate": 5.5,
+   "bps": -50
+  },
+  {
+   "date": "2025-12-05",
+   "rate": 5.25,
+   "bps": -25
+  }
+ ],
+ "meetings": [
+  {
+   "date": "2025-02-07",
+   "rate": 6.25,
+   "bps": -25,
+   "stance": null
+  },
+  {
+   "date": "2025-04-09",
+   "rate": 6.0,
+   "bps": -25,
+   "stance": null
+  },
+  {
+   "date": "2025-06-06",
+   "rate": 5.5,
+   "bps": -50,
+   "stance": null
+  },
+  {
+   "date": "2025-08-06",
+   "rate": 5.5,
+   "bps": 0,
+   "stance": null
+  },
+  {
+   "date": "2025-10-01",
+   "rate": 5.5,
+   "bps": 0,
+   "stance": null
+  },
+  {
+   "date": "2025-12-05",
+   "rate": 5.25,
+   "bps": -25,
+   "stance": null
+  },
+  {
+   "date": "2026-02-06",
+   "rate": 5.25,
+   "bps": 0,
+   "stance": null
+  },
+  {
+   "date": "2026-04-08",
+   "rate": 5.25,
+   "bps": 0,
+   "stance": null
+  },
+  {
+   "date": "2026-06-05",
+   "rate": 5.25,
+   "bps": 0,
+   "stance": null
+  },
+  {
+   "date": "2026-08-05",
+   "rate": 5.25,
+   "bps": 0,
+   "stance": "Neutral"
+  }
+ ],
+ "sources": [
+  {
+   "name": "BankBazaar repo rate page",
+   "url": "https://www.bankbazaar.com/home-loan/repo-rate.html",
+   "used": "Change dates and rates, Jan 2014 to May 2020"
+  },
+  {
+   "name": "Finnovate repo rate history",
+   "url": "https://www.finnovate.in/learn/blog/repo-rate",
+   "used": "Oct 2019 rate 5.15% and 2020 to 2022 dates; hold dates"
+  },
+  {
+   "name": "Bricksnwall repo rate timeline",
+   "url": "https://www.bricksnwall.com/news-details/all-you-need-to-know-about-rbi-repo-rate-changes-timeline",
+   "used": "2022 to 2026 changes and holds"
+  },
+  {
+   "name": "indiainflation.com repo rate",
+   "url": "https://indiainflation.com/rbi/repo-rate",
+   "used": "2025 and 2026 meeting dates and decisions"
+  },
+  {
+   "name": "Global Rates RBI policy repo rate",
+   "url": "https://www.global-rates.com/en/interest-rates/central-banks/13/indian-rbi-policy-repo-rate/",
+   "used": "Cross check of 2020 to 2025 changes"
+  },
+  {
+   "name": "Outlook Money, RBI MPC October 2026",
+   "url": "https://www.outlookmoney.com/amp/story/banking/rbi-mpc-october-2026-key-things-to-know-ahead-of-policy-decision",
+   "used": "Current rate, August 2026 hold, neutral stance, 7 October schedule"
+  },
+  {
+   "name": "Business Standard, RBI MPC October 2026",
+   "url": "https://www.business-standard.com/amp/finance/news/rbi-mpc-october-2026-meeting-when-and-where-to-watch-rate-decision-live-126100600090_1.html",
+   "used": "7 October announcement time and four consecutive holds"
+  }
+ ],
+ "caveats": [
+  "Dates for 2015 to 2020 come from secondary sites, not the RBI. Each date appears on at least one site; most appear on two.",
+  "Stance is verified only for August 2026. Other meetings show no stance.",
+  "Dates before 28 January 2014 are not in this series."
+ ]
+}
