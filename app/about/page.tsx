@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { PageHero } from "@/components/SectionHero";
 import NewsletterStrip from "@/components/NewsletterStrip";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
@@ -14,14 +15,14 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-16 lg:py-24">
-        {/* Header */}
-        <p className="font-plex text-xs font-semibold uppercase tracking-widest text-cobalt mb-4">
-          About
-        </p>
-        <h1 className="font-playfair text-4xl lg:text-5xl font-bold text-navy mb-8 leading-tight">
-          Why I built<br />SankhyaIQ
-        </h1>
+      <PageHero
+        eyebrow="About"
+        title="Why I built SankhyaIQ"
+        descriptor="Who is behind SankhyaIQ, why it exists and how we work with data."
+        texture="world-and-india"
+      />
+
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-14">
 
         {/* Story */}
         <div className="prose max-w-none">

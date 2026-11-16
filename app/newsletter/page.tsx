@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { PageHero } from "@/components/SectionHero";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { getFeaturedStories, storyHref } from "@/lib/stories";
@@ -17,18 +18,14 @@ export default function NewsletterPage() {
     <>
       <Navbar />
 
-      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-20 text-center">
-        <p className="font-plex text-xs font-semibold uppercase tracking-widest text-cobalt mb-4">Weekly newsletter</p>
-        <h1 className="font-playfair text-4xl lg:text-5xl font-bold text-navy mb-6">
-          One data story.
-          <br />
-          Every week.
-          <br />
-          Free.
-        </h1>
-        <p className="font-plex text-lg text-muted leading-relaxed mb-10 max-w-md mx-auto">
-          Every Friday, one chart, one story and one thing you will want to share. No sponsored content, no hot takes. Just data, carefully explained.
-        </p>
+      <PageHero
+        eyebrow="Weekly newsletter"
+        title="One data story. Every week. Free."
+        descriptor="Every Friday, one chart, one story and one thing you will want to share. No sponsored content, no hot takes. Just data, carefully explained."
+        texture="people-and-society"
+      />
+
+      <main className="max-w-2xl mx-auto px-4 sm:px-6 py-14 text-center">
 
         <div className="bg-surface border border-gray-200 rounded-2xl p-8 mb-16">
           {site.beehiivEmbedUrl ? (

@@ -123,31 +123,38 @@ function SectionTexture({ slug }: { slug: string }) {
 const heroColors: Record<string, string> = {
   "world-and-india": "from-cobalt to-navy",
   "people-and-society": "from-teal-600 to-teal-900",
-  "maps-and-geography": "from-amber-700 to-amber-900",
+  "maps-and-geography": "from-cyan-700 to-cyan-900",
   "animals-and-nature": "from-emerald to-forest",
-  "auto-and-ev": "from-slate-600 to-slate-900",
+  "auto-and-ev": "from-[#0277bd] to-[#013a63]",
   "money-and-economy": "from-navy to-blue-950",
   "ai-and-technology": "from-indigo-700 to-indigo-950",
   "science-and-space": "from-teal-800 to-teal-950",
 };
 
-export default function SectionHero({ section }: SectionHeroProps) {
-  const gradient = heroColors[section.slug] || "from-navy to-cobalt";
-
+// One hero band for every top level page, so sections, Dashboards, Newsletter and About open the same way.
+export function PageHero({
+  eyebrow, title, descriptor, gradient = "from-cobalt to-navy", texture, children,
+}: {
+  eyebrow: string; title: string; descriptor: string; gradient?: string; texture?: string; children?: React.ReactNode;
+}) {
   return (
-    <div className={`relative bg-gradient-to-br ${gradient} py-16 lg:py-24 overflow-hidden`}>
-      <SectionTexture slug={section.slug} />
+    <div className={`relative bg-gradient-to-br ${gradient} py-14 lg:py-20 overflow-hidden`}>
+      {texture && <SectionTexture slug={texture} />}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="font-plex text-sm font-medium text-white/60 uppercase tracking-widest mb-3">
-          Section
-        </p>
-        <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-white mb-4">
-          {section.label}
-        </h1>
-        <p className="font-plex text-lg text-white/80 max-w-xl">
-          {section.descriptor}
-        </p>
+        <p className="font-plex text-sm font-medium text-white/70 mb-3">{eyebrow}</p>
+        <h1 className="font-playfair text-4xl lg:text-6xl font-bold text-white mb-4 text-balance">{title}</h1>
+        <p className="font-plex text-lg text-white/85 max-w-2xl leading-relaxed">{descriptor}</p>
+        {children}
       </div>
     </div>
+  );
+}
+
+export default function SectionHero({ section, children }: SectionHeroProps & { children?: React.ReactNode }) {
+  const gradient = heroColors[section.slug] || "from-navy to-cobalt";
+  return (
+    <PageHero eyebrow="Section" title={section.label} descriptor={section.descriptor} gradient={gradient} texture={section.slug}>
+      {children}
+    </PageHero>
   );
 }

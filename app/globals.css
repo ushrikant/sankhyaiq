@@ -18,6 +18,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-playfair), Georgia, serif;
 }
 
+/* Playfair defaults to old-style figures. A data site needs numerals that sit on one line. */
+h1, h2, h3, h4, h5, h6, .font-playfair {
+  font-feature-settings: "lnum" 1;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

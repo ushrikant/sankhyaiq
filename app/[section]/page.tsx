@@ -6,6 +6,7 @@ import SectionHero from "@/components/SectionHero";
 import StoryCard from "@/components/StoryCard";
 import NewsletterStrip from "@/components/NewsletterStrip";
 import AnimalComparisons from "@/components/AnimalComparisons";
+import SectionInfographics from "@/components/infographics";
 import { getSectionBySlug, sections } from "@/lib/sections";
 import { getStoriesBySection } from "@/lib/stories";
 import DashboardCard from "@/components/dashboards/DashboardCard";
@@ -48,17 +49,32 @@ export default function SectionPage({ params }: Props) {
   return (
     <>
       <Navbar />
-      <SectionHero section={section} />
+      <SectionHero section={section}>
+        <nav aria-label="On this page" className="mt-7 flex flex-wrap gap-2">
+          {[
+            { href: "#infographics", label: "Ten infographics" },
+            ...(SectionFeature ? [{ href: "#field-notes", label: "Field notes" }] : []),
+            ...(sectionDashboards.length > 0 ? [{ href: "#dashboards", label: "Dashboards" }] : []),
+            ...(stories.length > 0 ? [{ href: "#stories", label: "Stories" }] : []),
+          ].map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="rounded-full border border-white/40 bg-white/10 px-4 py-1.5 font-plex text-sm font-medium text-white hover:bg-white hover:text-navy focus-visible:outline focus-visible:outline-2 focus-visible:outline-white transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+      </SectionHero>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        {SectionFeature && (
-          <div className="max-w-4xl mx-auto mb-16">
-            <SectionFeature />
-          </div>
-        )}
+        <SectionInfographics slug={section.slug} />
+
+        {SectionFeature && <SectionFeature />}
 
         {sectionDashboards.length > 0 && (
-          <section className="mb-16">
+          <section id="dashboards" className="mb-16 scroll-mt-24">
             <div className="flex items-baseline justify-between mb-6">
               <h2 className="font-playfair text-2xl font-bold text-navy">Dashboards</h2>
               <Link href="/dashboards" className="font-plex text-sm text-cobalt hover:text-navy underline underline-offset-2">All dashboards</Link>
@@ -73,7 +89,7 @@ export default function SectionPage({ params }: Props) {
 
         {/* Stories grid */}
         {stories.length > 0 ? (
-          <section className="mb-16">
+          <section id="stories" className="mb-16 scroll-mt-24">
             <h2 className="font-playfair text-2xl font-bold text-navy mb-6">
               Stories in {section.label}
             </h2>
@@ -94,9 +110,7 @@ export default function SectionPage({ params }: Props) {
 
         {/* You might also like */}
         <section className="mt-8 pt-8 border-t border-gray-100">
-          <h2 className="font-plex text-xs font-semibold uppercase tracking-widest text-muted mb-6">
-            You might also like
-          </h2>
+          <h2 className="font-playfair text-2xl font-bold text-navy mb-6">You might also like</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {otherSections.map((s) => (
               <Link
